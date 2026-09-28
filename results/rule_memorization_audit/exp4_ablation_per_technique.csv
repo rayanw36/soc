@@ -1,0 +1,10 @@
+technique,tag,n_attack,variant,recall,detected
+T1003.008,shared-rule,3,full,0.0000,0
+T1003.008,shared-rule,3,no_identity,0.0000,0
+T1003.008,shared-rule,3,behav_only,0.0000,0
+T1053.003,truly-unseen-rule,1,full,0.0000,0
+T1053.003,truly-unseen-rule,1,no_identity,0.0000,0
+T1053.003,truly-unseen-rule,1,behav_only,0.0000,0
+T1548.001,shared-rule,10,full,0.0000,0
+T1548.001,shared-rule,10,no_identity,0.0000,0
+T1548.001,shared-rule,10,behav_only,0.0000,0

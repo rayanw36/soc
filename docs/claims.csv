@@ -1,0 +1,49 @@
+section,claim,value,source_file,how_computed
+Abstract,AIT-ADS lookup-table F1 vs. XGBoost model F1 gap,+0.0003 (0.9945 vs 0.9942),results/rule_memorization_audit/exp3_lookup_results.csv;results/rule_memorization_audit/exp4_ablation_main.csv,"majority-label-per-rule-ID lookup table vs. audit-time XGBoost retrain (26-feature full variant), same AIT-ADS eval split"
+Abstract,AIT-ADS split is stratified-random not temporal,"train_test_split(test_size=0.20, stratify=y, random_state=42)",phase1_xgboost.py,direct source-code read of load_ait_ads Section 3
+Abstract,Temporal-split model-vs-lookup gap survives,+0.0002 (0.9909 vs 0.9907),docs/notes/rev_task1_split.md;analysis/rev_task1_temporal_results.json,"chronological 80/20 split of ait_split.npz reconstructed to original alert order, audit retrain + lookup table rerun"
+Dataset,AIT-ADS total alerts (all Wazuh rows incl. rule 86601),"2,600,263 (66.05% attack)",models_v2/ait_split.npz,"X_train+X_test row count and y mean, phase1_xgboost.py's load_ait_ads"
+Dataset,AIT-ADS Wazuh-native attack rate (whole corpus),74.62% (1711506/2293628),docs/lbl_provenance.md,"rule.id != 86601 subset, recomputed from analysis/xdet_wazuh_recovered_split.npz"
+Dataset,AIT-ADS Wazuh-native attack rate (eval split only),74.66% (342315/458517),docs/fig9_metric_fix.md,same subset restricted to the eval fold of the recovered exact split
+Dataset,AIT-ADS Suricata (rule 86601) attack rate,1.96% (6018/306635),docs/xdet_results.md,rule.id==86601 subset of the recovered Wazuh stream
+Dataset,AIT-ADS AMiner attack rate,84.70% (47062/55558),docs/lbl_provenance.md,"AnalysisComponentName-keyed AMiner stream, time-window labelled"
+Dataset,AIT-ADS distinct detector signatures,93 = 30 Wazuh + 29 Suricata + 34 AMiner,docs/lbl_provenance.md;docs/xdet_results.md,independently re-derived via jq over raw *_wazuh.json/*_aminer.json; cross-checked against AIT_alerts.csv
+Dataset,AIT-ADS dataset citation,Landauer Skopik Wurzenberger CSET'24 DOI 10.1145/3675741.3675748,docs/rev_dataset_table.tex,web search verification against ACM DL / arXiv 2308.12627
+Labelling,AIT-ADS labels are time-window intervals,"scenario,attack,start,end schema; 78 windows",docs/lbl_provenance.md,direct inspection of data/ait_ads/labels.csv
+Labelling,Linux testbed labels are 100% time-window (0% process-tree),22769 attack alerts; 0 HIGH-process; 22732 LOW-time (99.8%); 37 VLOW-time (0.2%),docs/notes/pre_ms_number_fixes.md;labelling/label_lnx_timeonly.py,recomputed directly from data/testbed_collection/labeled_lnx.csv
+Labelling,Windows testbed labels are mixed process-tree/time-window,336 attack alerts; 187 HIGH-process (55.7%); 149 LOW-time (44.3%),labelling/label_win_provenance.py,recomputed directly from data/testbed_collection/labeled_win.csv
+Labelling,Raw-timestamp misattribution if event time not corrected (Linux),74.1% wrong technique; 25.3% outside every window,labelling/label_lnx_timeonly.py,docstring measured figure (not independently re-derived in this repo)
+Labelling,FIM technique cross-check against syscheck.path,175/175 agreement (0 contradictions),docs/eval_set_definition.md,merge_asof time-window technique label vs. syscheck.path-derived ground truth on the FIM-rule subset
+Memorization,AIT-ADS ablation full/no_identity/behav_only F1,0.9945 / 0.9945 / 0.9895,results/rule_memorization_audit/exp4_ablation_main.csv,exp4_ablation.py 26/23/3-feature variants on the same eval split
+Memorization,AIT-ADS multiseed model F1 (10 seeds) mean+-SD,0.994526 +- 0.0000016,analysis/rev_task3_multiseed_results.json,"10 seeds (0-9), same audit-time XGBoost params, random split"
+Memorization,AIT-ADS multiseed temporal-split model F1 (10 seeds) mean+-SD,0.990898 +- 0.0000033,analysis/rev_task3_multiseed_results.json,"10 seeds (0-9), same audit-time XGBoost params, temporal split"
+Memorization,is_web_attack share of XGBoost split gain,94.99% (shown as 95.0%),results/rule_memorization_audit/exp2_importance_gain.csv,"gain_pct per feature, exp2_feature_importance.py"
+Memorization,26-feature bucket composition (corrected taxonomy),"3 RULE-IDENTITY, 21 RULE-CORRELATED, 2 BEHAVIORAL",results/rule_memorization_audit/exp1_feature_classification.csv;docs/feature_classification_correction.md,feature_classification_correction.md reclassification of time_since_last_high
+Cross-detector,Wazuh-native lookup vs trivial baseline F1,0.9960 vs 0.8549 (+0.1411),docs/fig9_metric_fix.md,"majority-label lookup vs. always-predict-attack baseline, same eval population"
+Cross-detector,Suricata lookup vs trivial baseline F1,0.0540 vs 0.0379 (+0.0160); 33/61536 flagged all correct,docs/fig9_c1_check.md,"raw counts restatement, xdet_task1_results.json confusion matrix"
+Cross-detector,AMiner lookup vs trivial baseline F1,0.9773 vs 0.9172 (+0.0601),docs/fig9_metric_fix.md,same methodology as Wazuh-native row
+Cross-detector,AMiner non-identity 5-feature model F1,0.9908 (exceeds lookup 0.9773 by +0.0135),analysis/fig9m_task2_aminer_model_results.json,"minimal model on raw_log_len/log_lines_count/3 causal tempo features, no signature identity"
+Cross-detector,AMiner tempo feature Control C1 verdict,PASS (benign 8.41% at cap vs attack 98.06%),docs/fig9_c1_check.md,"alert_rate_1min distribution on AMiner eval split, benign vs attack density at the 20-alert cap"
+Cross-detector,Wazuh-native vs AMiner lookup FPR contrast,0.0005 vs 0.2212 (~435x),docs/fig9_c1_check.md,xdet_task1_results.json confusion-matrix FPR fields
+Purity,Wazuh-native label-proxy exposure (purity>=0.99),74.09% (1699375/2293628),docs/lbl_provenance.md;analysis/purity_task1.py,"volume-weighted per-signature purity = max(attack-share, benign-share)"
+Purity,AMiner label-proxy exposure (purity>=0.99),53.05% (29473/55558),docs/lbl_provenance.md,"same method, AnalysisComponentName-keyed"
+Purity,Suricata label-proxy exposure (purity>=0.99),0.18% (538/306635),docs/lbl_provenance.md,"same method, rule-86601 subset"
+Purity,Wazuh-native exposure carried by 2 rules,99.6% of exposed volume (31101+31151),docs/purity_verify.md,"rule 31101 (68.5% vol, 0.9998 purity) + rule 31151 (5.3% vol, 1.0000 purity)"
+Windows recalibration,v8 best candidate F1 and FPR,F1=0.8000 at FPR=14.9% (candidate C2 xplatform_v7),results_v2/windows_recalibration_v8.md,"Task2 table, attack set n=168 (in_root_tree==True, T1110.001/T1136.001)"
+Windows recalibration,v8 candidate range,F1 0.7818-0.8000 at FPR 14.9-16.4% across C1/C2/C3,results_v2/windows_recalibration_v8.md,"same table -- not one F1 spanning the range, three distinct candidates"
+Windows recalibration,v8 attack-side T1110.001 share (population-mismatch defect),95.2% (160/168),docs/ew_carrier_classification.md,A6 -- attack set has no benign counterpart of its own rule family
+Windows recalibration,original (un-normalized/normalized) novelty-layer FPR,75.12% / 100.00%,results_v2/windows_recalibration_v8.md;docs/f1_final_summary.md,"Table 7.5 baseline rows, saturation artifact not detection"
+Windows recalibration,Windows L1 recall (un-normalized / normalized pipelines),6.04% / 57.74%,docs/f1_final_summary.md,"confusion-matrix table, two pipeline configurations"
+Windows recalibration,Windows fresh benign evaluation set size,201 (WIN-CL1 2026-07-12),results_v2/windows_recalibration_v8.md,"dedicated benign-only collection session, disjoint from training/calibration"
+Testbed collection,Linux attack-round collection total rows,"23081 (22769 attack, 19 benign, 293 uncertain)",data/testbed_collection/labeled_lnx.csv,"label x label_confidence tier counts, label_lnx_timeonly.py"
+Testbed collection,Linux dedicated fresh benign collection size,267,data/testbed_collection/collection_benign_lnx_alerts.csv,"row count, dedicated benign-only session per docs/benign_fim_collection_runbook.md"
+Testbed collection,Windows dedicated fresh benign collection size,201,data/testbed_collection/collection_benign_win_alerts.csv,"row count, dedicated benign-only session"
+Testbed collection,Entity-window extractor per-alert output,"23950 rows, 99 columns",analysis/ew_features/ew_augmented_per_alert.csv,row/column count of the committed extractor output file
+Testbed collection,Entity-window extractor window-level output,"244 rows, 29 columns",analysis/ew_features/ew_window_level.csv,row/column count of the committed extractor output file
+Testbed collection,Capture-tempo asymmetry ratios (Linux vs Windows),"135.2x mean (Linux), 1.5x mean (Windows)",docs/eval_set_definition.md;figures/fig5_tempo_asymmetry.py,"mean alert rate attack round vs benign round, event-time-corrected ts field"
+T1110.001 carrier,T1110.001 carrier status,"untraced (119/306, 38.9% of the discriminative-rule cross-tab)",docs/ew_carrier_classification.md,"final appended state (PRE-MS FIX 1), no ablation/swap test performed"
+Wilson intervals,rule-31101 benign FPR Wilson 95% CI,"10/209 = 4.8% [2.6%, 8.6%]",docs/notes/rev_task1_split.md,"Wilson score interval, z=1.96, computed for REV-C Task 3"
+Wilson intervals,rule 550/553/554 per-rule Wilson 95% CIs,"3/6 [18.8%,81.2%]; 1/1 [20.7%,100.0%]; 1/2 [9.5%,90.5%]",docs/rev_multiseed.md,Wilson score interval computed from analysis/a8_fp_rule_breakdown.csv counts
+Model config,Deployed XGBoost (L1) hyperparameters,n_estimators=500 max_depth=6 lr=0.05 subsample=0.8 colsample=0.8,docs/rev_model_config.md,"phase1_xgboost.py Section 4, read directly from source"
+Model config,Deployed OC-SVM (L2) hyperparameters,kernel=rbf nu=0.05 gamma=scale; no random_state parameter exists,docs/rev_model_config.md,"anomaly_model_comparison.py line 87, sklearn 1.9.0 API inspection"
+Model config,Deployed pickle scoring 'version mismatch' was actually a scaling bug,corrected: F1=0.9945 when scored through scaler_v2.pkl/imputer_v2.pkl,docs/rev_model_config.md,"direct re-test of models_v2/xgb_model.pkl against ait_split.npz X_test, raw vs scaled features"

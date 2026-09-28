@@ -1,0 +1,15 @@
+# Virtual environment
+.venv/
+__pycache__/
+*.pyc
+
+# AIT-ADS raw download only (multi-GB, not redistributed -- see
+# data/README.md). data/testbed_collection/, data/README.md, and
+# data/download_ait_ads.py are this project's OWN small artifacts and
+# must stay tracked -- do not broaden this back to a bare "data/".
+data/ait_ads/
+testAlerts/
+*.zip
+
+# OS / editor cruft
+.DS_Store

@@ -1,0 +1,58 @@
+% REV-C Task 4 -- model configuration table, ready to paste.
+% Source: newCol/rev_model_config.md (full derivation/citations there).
+
+\begin{table}[t]
+\centering
+\caption{XGBoost (L1) configuration: deployed model vs. the audit-time
+retrain used for the memorization/temporal-split analysis in this
+response. Deployed threshold selected by cost-sensitive grid search
+(cost $=$ FP $+10\cdot$FN); audit threshold by max-F1 grid search on the
+eval split itself (see \S d for the disclosed limitation this implies).}
+\label{tab:xgb-config}
+\begin{tabular}{lrr}
+\toprule
+Hyperparameter & Deployed & Audit-time retrain \\
+\midrule
+n\_estimators & 500 & 50 \\
+max\_depth & 6 & 5 \\
+learning\_rate & 0.05 & 0.1 \\
+subsample & 0.8 & 0.5 \\
+colsample\_bytree & 0.8 & 1.0 (default) \\
+min\_child\_weight & 5 & 1 (default) \\
+gamma & 1 & 0 (default) \\
+reg\_alpha & 0.1 & 0 (default) \\
+reg\_lambda & 1.0 & 1.0 (default) \\
+scale\_pos\_weight & 0.5140 (data-derived) & 1.0 (unweighted) \\
+objective & binary:logistic & binary:logistic \\
+eval\_metric & auc & logloss \\
+early\_stopping\_rounds & 30 (best\_iteration $=$ 219) & none \\
+random\_state & 42 & 42 (Task 1); 0--9 (Task 3 multiseed) \\
+tree\_method & hist & hist (default) \\
+decision threshold & $\theta_{xgb}=0.075377$ & per-run max-F1 calibration \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[t]
+\centering
+\caption{One-Class SVM (L2), deployed configuration
+(\texttt{models\_v2/ocsvm\_nu05.pkl}). No \texttt{random\_state} exists
+for \texttt{sklearn.svm.OneClassSVM}; the fit is deterministic given fixed
+data, so it is not multiseeded in Task 3.}
+\label{tab:ocsvm-config}
+\begin{tabular}{ll}
+\toprule
+Parameter & Value \\
+\midrule
+kernel & rbf \\
+nu & 0.05 \\
+gamma & scale \\
+Feature scaling & \texttt{StandardScaler} + median \texttt{SimpleImputer} (shared with L1) \\
+Training data & in-domain live lnx-dmz benign only (\emph{not} AIT-ADS; O($n^2$) constraint) \\
+Threshold & $\theta_{ocsvm}=-0.334996$ \\
+Threshold selection & max-F1 grid search over $\nu\in\{0.05,0.10,0.15\}$ on held-out benign + 43 novel alerts; \\
+ & $\nu=0.05$ chosen for best F1 (0.608) and cross-budget stability (72.1\% recall at 5\% and 10\% FPR); \\
+ & re-verified within a 2-point-percentage reproducibility gate \\
+\bottomrule
+\end{tabular}
+\end{table}

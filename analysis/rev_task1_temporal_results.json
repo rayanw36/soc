@@ -1,0 +1,92 @@
+{
+  "library_versions": {
+    "numpy": "2.4.6",
+    "pandas": "2.3.3",
+    "sklearn": "1.9.0",
+    "xgboost": "3.2.0"
+  },
+  "n_total": 2600263,
+  "random_split": {
+    "train_n": 2080210,
+    "train_attack": 1374019,
+    "train_attack_pct": 66.05193706404641,
+    "test_n": 520053,
+    "test_attack": 343505,
+    "test_attack_pct": 66.05192163106453,
+    "lookup_rerun_here": {
+      "precision": 0.9998263137597773,
+      "recall": 0.9887308772798067,
+      "f1": 0.9942476412401675,
+      "fpr": 0.00033418673675147834,
+      "tp": 339634,
+      "fp": 59,
+      "tn": 176489,
+      "fn": 3871
+    },
+    "model_rerun_here": {
+      "precision": 0.9999823412552424,
+      "recall": 0.989123884659612,
+      "f1": 0.994523475002927,
+      "fpr": 3.39850918730317e-05,
+      "tp": 339769,
+      "fp": 6,
+      "tn": 176542,
+      "fn": 3736
+    },
+    "model_theta": 0.41783174872398376
+  },
+  "temporal_split": {
+    "cut_epoch": 1644232749.0,
+    "cut_iso": "2022-02-07T11:19:09+00:00",
+    "train_n": 2080210,
+    "train_attack": 1278373,
+    "train_attack_pct": 61.454035890607194,
+    "test_n": 520053,
+    "test_attack": 439151,
+    "test_attack_pct": 84.44350864238838,
+    "train_scenario_counts": {
+      "wheeler": 603939,
+      "wilson": 564197,
+      "fox": 462523,
+      "santos": 126513,
+      "harrison": 124807,
+      "wardbeck": 88204,
+      "shaw": 68539,
+      "russellmitchell": 41488
+    },
+    "test_scenario_counts": {
+      "harrison": 458947,
+      "wilson": 61106
+    },
+    "lookup": {
+      "precision": 0.9999489720181103,
+      "recall": 0.9816987778691156,
+      "f1": 0.9907398363987971,
+      "fpr": 0.00027193394477268795,
+      "tp": 431114,
+      "fp": 22,
+      "tn": 80880,
+      "fn": 8037
+    },
+    "lookup_n_signatures_train": 31,
+    "lookup_n_unseen_test": 0,
+    "lookup_n_unseen_test_pct": 0.0,
+    "nmi_train": 0.6399928056402971,
+    "nmi_test": 0.570159817604766,
+    "rule31101_train_n": 1172277,
+    "rule31101_train_attack_pct": 99.98003884747376,
+    "rule31101_test_n": 399036,
+    "rule31101_test_attack_pct": 99.99448671297827,
+    "model": {
+      "precision": 0.9999860866984199,
+      "recall": 0.9819765866410415,
+      "f1": 0.9908995132084013,
+      "fpr": 7.416380311982398e-05,
+      "tp": 431236,
+      "fp": 6,
+      "tn": 80896,
+      "fn": 7915
+    },
+    "model_theta": 0.10764268040657043
+  }
+}

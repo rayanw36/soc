@@ -1,0 +1,341 @@
+{
+  "b1_suricata": {
+    "n_majority_attack": 5,
+    "n_majority_benign": 24,
+    "vol_majority_attack": 201,
+    "vol_majority_benign": 306434,
+    "total": 306635,
+    "rows": [
+      {
+        "signature": "Suricata: Alert - ET DNS DNS Lookup for localhost.DOMAIN.TLD",
+        "n_attack": 0,
+        "n_benign": 4,
+        "total": 4,
+        "attack_benign_ratio": 0.0,
+        "majority": "benign"
+      },
+      {
+        "signature": "Suricata: Alert - ET DNS Query for .cc TLD",
+        "n_attack": 0,
+        "n_benign": 48,
+        "total": 48,
+        "attack_benign_ratio": 0.0,
+        "majority": "benign"
+      },
+      {
+        "signature": "Suricata: Alert - ET DNS Query for .su TLD (Soviet Union) Often Malware Related",
+        "n_attack": 0,
+        "n_benign": 2,
+        "total": 2,
+        "attack_benign_ratio": 0.0,
+        "majority": "benign"
+      },
+      {
+        "signature": "Suricata: Alert - ET DNS Query for .to TLD",
+        "n_attack": 0,
+        "n_benign": 85,
+        "total": 85,
+        "attack_benign_ratio": 0.0,
+        "majority": "benign"
+      },
+      {
+        "signature": "Suricata: Alert - ET DNS Query to a *.pw domain - Likely Hostile",
+        "n_attack": 0,
+        "n_benign": 4,
+        "total": 4,
+        "attack_benign_ratio": 0.0,
+        "majority": "benign"
+      },
+      {
+        "signature": "Suricata: Alert - ET HUNTING Possible COVID-19 Domain in SSL Certificate M2",
+        "n_attack": 0,
+        "n_benign": 47,
+        "total": 47,
+        "attack_benign_ratio": 0.0,
+        "majority": "benign"
+      },
+      {
+        "signature": "Suricata: Alert - ET HUNTING Suspicious Domain Request for Possible COVID-19 Domain M1",
+        "n_attack": 0,
+        "n_benign": 27,
+        "total": 27,
+        "attack_benign_ratio": 0.0,
+        "majority": "benign"
+      },
+      {
+        "signature": "Suricata: Alert - ET HUNTING Suspicious TLS SNI Request for Possible COVID-19 Domain M1",
+        "n_attack": 0,
+        "n_benign": 21,
+        "total": 21,
+        "attack_benign_ratio": 0.0,
+        "majority": "benign"
+      },
+      {
+        "signature": "Suricata: Alert - ET INFO DNS Query for Suspicious .ga Domain",
+        "n_attack": 0,
+        "n_benign": 20,
+        "total": 20,
+        "attack_benign_ratio": 0.0,
+        "majority": "benign"
+      },
+      {
+        "signature": "Suricata: Alert - ET INFO Observed DNS Query to .biz TLD",
+        "n_attack": 1017,
+        "n_benign": 90744,
+        "total": 91761,
+        "attack_benign_ratio": 0.011207352552234859,
+        "majority": "benign"
+      },
+      {
+        "signature": "Suricata: Alert - ET INFO Observed DNS Query to .cloud TLD",
+        "n_attack": 11,
+        "n_benign": 453,
+        "total": 464,
+        "attack_benign_ratio": 0.024282560706401765,
+        "majority": "benign"
+      },
+      {
+        "signature": "Suricata: Alert - ET INFO Session Traversal Utilities for NAT (STUN Binding Request)",
+        "n_attack": 0,
+        "n_benign": 10,
+        "total": 10,
+        "attack_benign_ratio": 0.0,
+        "majority": "benign"
+      },
+      {
+        "signature": "Suricata: Alert - ET INFO Session Traversal Utilities for NAT (STUN Binding Response)",
+        "n_attack": 0,
+        "n_benign": 2,
+        "total": 2,
+        "attack_benign_ratio": 0.0,
+        "majority": "benign"
+      },
+      {
+        "signature": "Suricata: Alert - ET INFO Suspicious Domain (*.ga) in TLS SNI",
+        "n_attack": 0,
+        "n_benign": 19,
+        "total": 19,
+        "attack_benign_ratio": 0.0,
+        "majority": "benign"
+      },
+      {
+        "signature": "Suricata: Alert - ET INFO TLS Handshake Failure",
+        "n_attack": 0,
+        "n_benign": 12,
+        "total": 12,
+        "attack_benign_ratio": 0.0,
+        "majority": "benign"
+      },
+      {
+        "signature": "Suricata: Alert - ET POLICY GNU/Linux APT User-Agent Outbound likely related to package management",
+        "n_attack": 37,
+        "n_benign": 3385,
+        "total": 3422,
+        "attack_benign_ratio": 0.010930576070901034,
+        "majority": "benign"
+      },
+      {
+        "signature": "Suricata: Alert - ET SCAN Behavioral Unusual Port 445 traffic Potential Scan or Infection",
+        "n_attack": 0,
+        "n_benign": 2,
+        "total": 2,
+        "attack_benign_ratio": 0.0,
+        "majority": "benign"
+      },
+      {
+        "signature": "Suricata: Alert - ET SCAN Possible Nmap User-Agent Observed",
+        "n_attack": 138,
+        "n_benign": 0,
+        "total": 138,
+        "attack_benign_ratio": "inf",
+        "majority": "attack"
+      },
+      {
+        "signature": "Suricata: Alert - SURICATA DNS Unsolicited response",
+        "n_attack": 0,
+        "n_benign": 3,
+        "total": 3,
+        "attack_benign_ratio": 0.0,
+        "majority": "benign"
+      },
+      {
+        "signature": "Suricata: Alert - SURICATA HTTP gzip decompression failed",
+        "n_attack": 0,
+        "n_benign": 27,
+        "total": 27,
+        "attack_benign_ratio": 0.0,
+        "majority": "benign"
+      },
+      {
+        "signature": "Suricata: Alert - SURICATA HTTP invalid response chunk len",
+        "n_attack": 2,
+        "n_benign": 10,
+        "total": 12,
+        "attack_benign_ratio": 0.2,
+        "majority": "benign"
+      },
+      {
+        "signature": "Suricata: Alert - SURICATA HTTP unable to match response to request",
+        "n_attack": 11,
+        "n_benign": 368,
+        "total": 379,
+        "attack_benign_ratio": 0.029891304347826088,
+        "majority": "benign"
+      },
+      {
+        "signature": "Suricata: Alert - SURICATA SMTP invalid reply",
+        "n_attack": 18,
+        "n_benign": 0,
+        "total": 18,
+        "attack_benign_ratio": "inf",
+        "majority": "attack"
+      },
+      {
+        "signature": "Suricata: Alert - SURICATA SMTP no server welcome message",
+        "n_attack": 18,
+        "n_benign": 0,
+        "total": 18,
+        "attack_benign_ratio": "inf",
+        "majority": "attack"
+      },
+      {
+        "signature": "Suricata: Alert - SURICATA TLS certificate invalid der",
+        "n_attack": 0,
+        "n_benign": 4,
+        "total": 4,
+        "attack_benign_ratio": 0.0,
+        "majority": "benign"
+      },
+      {
+        "signature": "Suricata: Alert - SURICATA TLS invalid SSLv2 header",
+        "n_attack": 18,
+        "n_benign": 0,
+        "total": 18,
+        "attack_benign_ratio": "inf",
+        "majority": "attack"
+      },
+      {
+        "signature": "Suricata: Alert - SURICATA TLS invalid handshake message",
+        "n_attack": 2356,
+        "n_benign": 102660,
+        "total": 105016,
+        "attack_benign_ratio": 0.02294954217806351,
+        "majority": "benign"
+      },
+      {
+        "signature": "Suricata: Alert - SURICATA TLS invalid record type",
+        "n_attack": 9,
+        "n_benign": 0,
+        "total": 9,
+        "attack_benign_ratio": "inf",
+        "majority": "attack"
+      },
+      {
+        "signature": "Suricata: Alert - SURICATA TLS invalid record/traffic",
+        "n_attack": 2383,
+        "n_benign": 102660,
+        "total": 105043,
+        "attack_benign_ratio": 0.02321254626923826,
+        "majority": "benign"
+      }
+    ]
+  },
+  "b2": {
+    "our_n_signatures": 29,
+    "paper_n_signatures": 29,
+    "missing_from_ours": [],
+    "extra_in_ours": [],
+    "our_total_volume": 306635,
+    "paper_total_volume": 306635,
+    "volume_match": true
+  },
+  "b3_wazuh_native": {
+    ">=1000:1": {
+      "n_signatures": 9,
+      "volume": 1698459,
+      "volume_pct": 74.05119749148511
+    },
+    ">=100:1": {
+      "n_signatures": 9,
+      "volume": 1698459,
+      "volume_pct": 74.05119749148511
+    },
+    ">=10:1": {
+      "n_signatures": 9,
+      "volume": 1698459,
+      "volume_pct": 74.05119749148511
+    },
+    ">=2:1": {
+      "n_signatures": 11,
+      "volume": 1698548,
+      "volume_pct": 74.05507780686318
+    },
+    "strictly_exclusive": {
+      "n_signatures": 8,
+      "volume": 127146,
+      "volume_pct": 5.543444708557796
+    }
+  },
+  "b3_suricata": {
+    ">=1000:1": {
+      "n_signatures": 5,
+      "volume": 201,
+      "volume_pct": 0.06555024703637875
+    },
+    ">=100:1": {
+      "n_signatures": 5,
+      "volume": 201,
+      "volume_pct": 0.06555024703637875
+    },
+    ">=10:1": {
+      "n_signatures": 5,
+      "volume": 201,
+      "volume_pct": 0.06555024703637875
+    },
+    ">=2:1": {
+      "n_signatures": 5,
+      "volume": 201,
+      "volume_pct": 0.06555024703637875
+    },
+    "strictly_exclusive": {
+      "n_signatures": 5,
+      "volume": 201,
+      "volume_pct": 0.06555024703637875
+    }
+  },
+  "b3_aminer": {
+    ">=1000:1": {
+      "n_signatures": 0,
+      "volume": 0,
+      "volume_pct": 0.0
+    },
+    ">=100:1": {
+      "n_signatures": 1,
+      "volume": 27342,
+      "volume_pct": 49.21343460887721
+    },
+    ">=10:1": {
+      "n_signatures": 3,
+      "volume": 40928,
+      "volume_pct": 73.66715864501963
+    },
+    ">=2:1": {
+      "n_signatures": 4,
+      "volume": 48588,
+      "volume_pct": 87.45455199971201
+    },
+    "strictly_exclusive": {
+      "n_signatures": 0,
+      "volume": 0,
+      "volume_pct": 0.0
+    }
+  },
+  "rule_31101_detail": {
+    "signature": "31101",
+    "n_attack": 1571057,
+    "n_benign": 256,
+    "total": 1571313,
+    "attack_benign_ratio": 6136.94140625,
+    "majority": "attack"
+  }
+}

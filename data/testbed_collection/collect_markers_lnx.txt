@@ -1,0 +1,133 @@
+############# COLLECTION START 2026-07-08T20:22:28Z #############
+>>> 2026-07-08T20:22:28Z ROOT_PID | collection_session pid=10631
+>>> 2026-07-08T20:22:28Z EXPORT_FROM | note_this_time_minus_30min_for_export
+
+########################  ROUND 1 / 6  ########################
+>>> 2026-07-08T20:22:28Z PHASE | KNOWN round 1
+>>> 2026-07-08T20:22:28Z START | T1595.003 dirb_webscan
+>>> 2026-07-08T20:22:30Z END | T1595.003 dirb_webscan
+>>> 2026-07-08T20:22:39Z START | T1046 nmap_scan
+>>> 2026-07-08T20:22:39Z END | T1046 nmap_scan
+>>> 2026-07-08T20:22:46Z START | T1110.001 ssh_bruteforce
+>>> 2026-07-08T20:23:05Z END | T1110.001 ssh_bruteforce
+>>> 2026-07-08T20:23:13Z PHASE | NOVEL round 1
+>>> 2026-07-08T20:23:13Z START | T1053.003 cron_persistence
+>>> 2026-07-08T20:23:32Z END | T1053.003 cron_persistence
+>>> 2026-07-08T20:23:40Z START | T1543.002 systemd_service
+>>> 2026-07-08T20:23:59Z END | T1543.002 systemd_service
+>>> 2026-07-08T20:24:07Z START | T1098.004 ssh_authorized_keys
+>>> 2026-07-08T20:24:25Z END | T1098.004 ssh_authorized_keys
+>>> 2026-07-08T20:24:33Z START | T1136.001 create_local_user
+>>> 2026-07-08T20:24:51Z END | T1136.001 create_local_user
+>>> 2026-07-08T20:24:59Z START | T1546.004 shell_rc_modify
+>>> 2026-07-08T20:25:18Z END | T1546.004 shell_rc_modify
+>>> 2026-07-08T20:25:27Z BASELINE | quiet 90s (benign background)
+
+########################  ROUND 2 / 6  ########################
+>>> 2026-07-08T20:26:57Z PHASE | KNOWN round 2
+>>> 2026-07-08T20:26:57Z START | T1595.003 dirb_webscan
+>>> 2026-07-08T20:26:59Z END | T1595.003 dirb_webscan
+>>> 2026-07-08T20:27:07Z START | T1046 nmap_scan
+>>> 2026-07-08T20:27:07Z END | T1046 nmap_scan
+>>> 2026-07-08T20:27:15Z START | T1110.001 ssh_bruteforce
+>>> 2026-07-08T20:27:37Z END | T1110.001 ssh_bruteforce
+>>> 2026-07-08T20:27:45Z PHASE | NOVEL round 2
+>>> 2026-07-08T20:27:45Z START | T1053.003 cron_persistence
+>>> 2026-07-08T20:28:03Z END | T1053.003 cron_persistence
+>>> 2026-07-08T20:28:11Z START | T1543.002 systemd_service
+>>> 2026-07-08T20:28:30Z END | T1543.002 systemd_service
+>>> 2026-07-08T20:28:39Z START | T1098.004 ssh_authorized_keys
+>>> 2026-07-08T20:28:58Z END | T1098.004 ssh_authorized_keys
+>>> 2026-07-08T20:29:07Z START | T1136.001 create_local_user
+>>> 2026-07-08T20:29:27Z END | T1136.001 create_local_user
+>>> 2026-07-08T20:29:35Z START | T1546.004 shell_rc_modify
+>>> 2026-07-08T20:29:53Z END | T1546.004 shell_rc_modify
+>>> 2026-07-08T20:30:01Z BASELINE | quiet 90s (benign background)
+
+########################  ROUND 3 / 6  ########################
+>>> 2026-07-08T20:31:31Z PHASE | KNOWN round 3
+>>> 2026-07-08T20:31:31Z START | T1595.003 dirb_webscan
+>>> 2026-07-08T20:31:33Z END | T1595.003 dirb_webscan
+>>> 2026-07-08T20:31:41Z START | T1046 nmap_scan
+>>> 2026-07-08T20:31:43Z END | T1046 nmap_scan
+>>> 2026-07-08T20:31:51Z START | T1110.001 ssh_bruteforce
+>>> 2026-07-08T20:32:13Z END | T1110.001 ssh_bruteforce
+>>> 2026-07-08T20:32:21Z PHASE | NOVEL round 3
+>>> 2026-07-08T20:32:21Z START | T1053.003 cron_persistence
+>>> 2026-07-08T20:32:39Z END | T1053.003 cron_persistence
+>>> 2026-07-08T20:32:47Z START | T1543.002 systemd_service
+>>> 2026-07-08T20:33:07Z END | T1543.002 systemd_service
+>>> 2026-07-08T20:33:15Z START | T1098.004 ssh_authorized_keys
+>>> 2026-07-08T20:33:33Z END | T1098.004 ssh_authorized_keys
+>>> 2026-07-08T20:33:41Z START | T1136.001 create_local_user
+>>> 2026-07-08T20:34:00Z END | T1136.001 create_local_user
+>>> 2026-07-08T20:34:08Z START | T1546.004 shell_rc_modify
+>>> 2026-07-08T20:34:27Z END | T1546.004 shell_rc_modify
+>>> 2026-07-08T20:34:36Z BASELINE | quiet 90s (benign background)
+
+########################  ROUND 4 / 6  ########################
+>>> 2026-07-08T20:36:06Z PHASE | KNOWN round 4
+>>> 2026-07-08T20:36:06Z START | T1595.003 dirb_webscan
+>>> 2026-07-08T20:36:08Z END | T1595.003 dirb_webscan
+>>> 2026-07-08T20:36:16Z START | T1046 nmap_scan
+>>> 2026-07-08T20:36:16Z END | T1046 nmap_scan
+>>> 2026-07-08T20:36:24Z START | T1110.001 ssh_bruteforce
+>>> 2026-07-08T20:36:43Z END | T1110.001 ssh_bruteforce
+>>> 2026-07-08T20:36:51Z PHASE | NOVEL round 4
+>>> 2026-07-08T20:36:51Z START | T1053.003 cron_persistence
+>>> 2026-07-08T20:37:09Z END | T1053.003 cron_persistence
+>>> 2026-07-08T20:37:18Z START | T1543.002 systemd_service
+>>> 2026-07-08T20:37:37Z END | T1543.002 systemd_service
+>>> 2026-07-08T20:37:45Z START | T1098.004 ssh_authorized_keys
+>>> 2026-07-08T20:38:03Z END | T1098.004 ssh_authorized_keys
+>>> 2026-07-08T20:38:12Z START | T1136.001 create_local_user
+>>> 2026-07-08T20:38:31Z END | T1136.001 create_local_user
+>>> 2026-07-08T20:38:39Z START | T1546.004 shell_rc_modify
+>>> 2026-07-08T20:38:57Z END | T1546.004 shell_rc_modify
+>>> 2026-07-08T20:39:06Z BASELINE | quiet 90s (benign background)
+
+########################  ROUND 5 / 6  ########################
+>>> 2026-07-08T20:40:36Z PHASE | KNOWN round 5
+>>> 2026-07-08T20:40:36Z START | T1595.003 dirb_webscan
+>>> 2026-07-08T20:40:39Z END | T1595.003 dirb_webscan
+>>> 2026-07-08T20:40:47Z START | T1046 nmap_scan
+>>> 2026-07-08T20:40:47Z END | T1046 nmap_scan
+>>> 2026-07-08T20:40:55Z START | T1110.001 ssh_bruteforce
+>>> 2026-07-08T20:41:15Z END | T1110.001 ssh_bruteforce
+>>> 2026-07-08T20:41:23Z PHASE | NOVEL round 5
+>>> 2026-07-08T20:41:24Z START | T1053.003 cron_persistence
+>>> 2026-07-08T20:41:42Z END | T1053.003 cron_persistence
+>>> 2026-07-08T20:41:50Z START | T1543.002 systemd_service
+>>> 2026-07-08T20:42:08Z END | T1543.002 systemd_service
+>>> 2026-07-08T20:42:17Z START | T1098.004 ssh_authorized_keys
+>>> 2026-07-08T20:42:35Z END | T1098.004 ssh_authorized_keys
+>>> 2026-07-08T20:42:43Z START | T1136.001 create_local_user
+>>> 2026-07-08T20:43:02Z END | T1136.001 create_local_user
+>>> 2026-07-08T20:43:10Z START | T1546.004 shell_rc_modify
+>>> 2026-07-08T20:43:29Z END | T1546.004 shell_rc_modify
+>>> 2026-07-08T20:43:38Z BASELINE | quiet 90s (benign background)
+
+########################  ROUND 6 / 6  ########################
+>>> 2026-07-08T20:45:08Z PHASE | KNOWN round 6
+>>> 2026-07-08T20:45:08Z START | T1595.003 dirb_webscan
+>>> 2026-07-08T20:45:10Z END | T1595.003 dirb_webscan
+>>> 2026-07-08T20:45:18Z START | T1046 nmap_scan
+>>> 2026-07-08T20:45:19Z END | T1046 nmap_scan
+>>> 2026-07-08T20:45:27Z START | T1110.001 ssh_bruteforce
+>>> 2026-07-08T20:45:47Z END | T1110.001 ssh_bruteforce
+>>> 2026-07-08T20:45:55Z PHASE | NOVEL round 6
+>>> 2026-07-08T20:45:55Z START | T1053.003 cron_persistence
+>>> 2026-07-08T20:46:13Z END | T1053.003 cron_persistence
+>>> 2026-07-08T20:46:21Z START | T1543.002 systemd_service
+>>> 2026-07-08T20:46:40Z END | T1543.002 systemd_service
+>>> 2026-07-08T20:46:48Z START | T1098.004 ssh_authorized_keys
+>>> 2026-07-08T20:47:06Z END | T1098.004 ssh_authorized_keys
+>>> 2026-07-08T20:47:14Z START | T1136.001 create_local_user
+>>> 2026-07-08T20:47:32Z END | T1136.001 create_local_user
+>>> 2026-07-08T20:47:41Z START | T1546.004 shell_rc_modify
+>>> 2026-07-08T20:47:59Z END | T1546.004 shell_rc_modify
+
+>>> 2026-07-08T20:48:08Z EXPORT_TO | note_this_time_plus_30min_for_export
+############# COLLECTION DONE 2026-07-08T20:48:08Z #############
+# Archive raw provenance NOW:
+#   sudo cp /var/log/audit/audit.log ~/collection_$(date +%F)/audit_lnxdmz.log

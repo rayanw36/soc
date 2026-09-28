@@ -1,0 +1,2 @@
+section,claim,value,source_file,how_computed
+"Carrier classification (IV-D / Table VI, historical)","T1110.001 (ssh brute force, rules 5710/5712) carrier",endogenous auth aggregates,,"no ablation or feature-swap test was ever run for this technique -- unlike every FIM technique and T1136.001, which all have one (docs/ew_carrier_classification.md, 1a/1b table + the note below it); the characterisation predates this repository's own audit and names no producing script or artifact"

@@ -1,0 +1,118 @@
+{
+  "wazuh_native": {
+    "name": "WAZUH-NATIVE (30 signatures, rule.id != 86601)",
+    "n": 2293628,
+    "n_signatures": 30,
+    "attack_rate": 0.7462003428629228,
+    "top_signature": "31101",
+    "top_signature_attack_share_pct": 91.79383537072029,
+    "n_train": 1835111,
+    "n_eval": 458517,
+    "lookup": {
+      "precision": 0.9998263137597773,
+      "recall": 0.9921680323678483,
+      "f1": 0.995982451818747,
+      "fpr": 0.0005077365277706064,
+      "tp": 339634,
+      "fp": 59,
+      "tn": 116143,
+      "fn": 2681,
+      "n_signatures_train": 30,
+      "n_unseen_eval": 0,
+      "n_unseen_eval_pct": 0.0
+    },
+    "nmi_train": 0.6800153296554778,
+    "nmi_eval": 0.6788454941330986,
+    "nmi_full": 0.6797710558170655
+  },
+  "suricata": {
+    "name": "SURICATA (29 signatures, embedded in Wazuh rule 86601, keyed by rule.description)",
+    "n": 306635,
+    "n_signatures": 29,
+    "attack_rate": 0.01962593963507101,
+    "top_signature": "Suricata: Alert - SURICATA TLS invalid record/traffic",
+    "top_signature_attack_share_pct": 39.5978730475241,
+    "n_train": 245099,
+    "n_eval": 61536,
+    "lookup": {
+      "precision": 1.0,
+      "recall": 0.02773109243697479,
+      "f1": 0.05396565821749796,
+      "fpr": 0.0,
+      "tp": 33,
+      "fp": 0,
+      "tn": 60346,
+      "fn": 1157,
+      "n_signatures_train": 29,
+      "n_unseen_eval": 0,
+      "n_unseen_eval_pct": 0.0
+    },
+    "nmi_train": 0.005622752919703109,
+    "nmi_eval": 0.00477965641777542,
+    "nmi_full": 0.005417837050559333
+  },
+  "aminer": {
+    "name": "AMiner (34 signatures, keyed by AnalysisComponentName)",
+    "n": 55558,
+    "n_signatures": 34,
+    "attack_rate": 0.8469887324957702,
+    "top_signature": "AMiner: New request method in Apache Access log.",
+    "top_signature_attack_share_pct": 57.9488705187326,
+    "n_train": 44446,
+    "n_eval": 11112,
+    "lookup": {
+      "precision": 0.961352657004831,
+      "recall": 0.9937314067148322,
+      "f1": 0.9772739146335092,
+      "fpr": 0.2211764705882353,
+      "tp": 9353,
+      "fp": 376,
+      "tn": 1324,
+      "fn": 59,
+      "n_signatures_train": 34,
+      "n_unseen_eval": 0,
+      "n_unseen_eval_pct": 0.0
+    },
+    "nmi_train": 0.28654799701468725,
+    "nmi_eval": 0.2870265367972639,
+    "nmi_full": 0.2862528696475739
+  },
+  "deployed_model_by_subset": {
+    "Wazuh-native (rule.id != 86601)": {
+      "precision": 0.9999852821269093,
+      "recall": 0.9924134203876547,
+      "f1": 0.996184963301165,
+      "fpr": 4.302851930259376e-05,
+      "tp": 339718,
+      "fp": 5,
+      "tn": 116197,
+      "fn": 2597
+    },
+    "Suricata-via-Wazuh (rule.id == 86601)": {
+      "precision": 0.9807692307692307,
+      "recall": 0.04285714285714286,
+      "f1": 0.0821256038647343,
+      "fpr": 1.6571106618499983e-05,
+      "tp": 51,
+      "fp": 1,
+      "tn": 60345,
+      "fn": 1139
+    },
+    "theta_audit_retrain": 0.37980902194976807,
+    "note": "audit-time retrain, exp4_ablation.py 'full'-variant methodology; deployed xgb_model.pkl is degenerate in this environment (see script docstring) and was not usable"
+  },
+  "suricata_composition": {
+    "n": 306635,
+    "attack_rate": 0.01962593963507101,
+    "scenario_counts": {
+      "fox": 11084,
+      "harrison": 67384,
+      "russellmitchell": 9186,
+      "santos": 44112,
+      "shaw": 16692,
+      "wardbeck": 24510,
+      "wheeler": 68629,
+      "wilson": 65038
+    }
+  }
+}

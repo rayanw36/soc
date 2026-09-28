@@ -1,0 +1,36 @@
+cff-version: 1.2.0
+message: "If you use this software or the controls it implements, please cite the paper below."
+title: "Rule-Identity Memorization in SIEM Alert Triage: Why Benchmark Performance Does Not Transfer, and Seven Controls That Detect It"
+type: software
+authors:
+  - given-names: Mohammad
+    family-names: Arwani
+  - given-names: Rayen
+    family-names: Chikhaoui
+  - given-names: Abdulaziz
+    family-names: Barnawi
+  - given-names: Farid
+    family-names: Binbeshr
+  - given-names: Muhammad
+    family-names: Imam
+repository-code: "https://github.com/rayanw36/soc"
+license: MIT
+version: "0.1.0"
+date-released: "TBD"
+preferred-citation:
+  type: conference-paper
+  title: "Rule-Identity Memorization in SIEM Alert Triage: Why Benchmark Performance Does Not Transfer, and Seven Controls That Detect It"
+  authors:
+    - given-names: Mohammad
+      family-names: Arwani
+    - given-names: Rayen
+      family-names: Chikhaoui
+    - given-names: Abdulaziz
+      family-names: Barnawi
+    - given-names: Farid
+      family-names: Binbeshr
+    - given-names: Muhammad
+      family-names: Imam
+  conference:
+    name: "TBD"
+  year: 2026

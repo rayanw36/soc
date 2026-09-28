@@ -1,0 +1,12 @@
+metric,value
+XGBoost F1 (published),0.0000
+Lookup-table F1 (rule_id only),0.9942
+Gap (XGB - lookup),-0.9942
+"NMI(rule_id, label) train",0.6361
+"NMI(rule_id, label) test",0.6355
+Distinct rules in train,31
+Rules mapped to attack,11
+Rules mapped to benign,20
+Rule 31101 train attack%,100.0%
+Rule 31101 test attack%,100.0%
+Unseen test rule IDs,0

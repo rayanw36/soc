@@ -1,0 +1,6 @@
+Windows old-pool benign total: 11326
+Windows train partition: 7928
+Windows calibration holdout: 3398
+Linux old-pool benign total: 8092
+Linux fresh matched benign: 267
+Windows fresh matched benign (reserved for Task 2 eval): 201

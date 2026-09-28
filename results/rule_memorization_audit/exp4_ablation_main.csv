@@ -1,0 +1,4 @@
+variant,n_features,theta,ait_f1,ait_recall,ait_fpr,online_f1,online_recall,online_fpr
+full,26,0.37981,0.9945,0.9891,0.0000,N/A,N/A,N/A
+no_identity,23,0.42313,0.9945,0.9891,0.0000,N/A,N/A,N/A
+behav_only,3,0.39006,0.9895,0.9886,0.0187,N/A,N/A,N/A

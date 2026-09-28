@@ -1,0 +1,58 @@
+======================================================================
+RANDOM split -- 3 ablation variants x 10 seeds
+======================================================================
+
+--- variant: full (26 features) ---
+  [random/full] seed=0 F1=0.9945 theta=0.30238 (9.0s)
+  [random/full] seed=1 F1=0.9945 theta=0.39911 (9.5s)
+  [random/full] seed=2 F1=0.9945 theta=0.39858 (9.1s)
+  [random/full] seed=3 F1=0.9945 theta=0.49490 (9.1s)
+  [random/full] seed=4 F1=0.9945 theta=0.51244 (9.2s)
+  [random/full] seed=5 F1=0.9945 theta=0.29236 (9.0s)
+  [random/full] seed=6 F1=0.9945 theta=0.46536 (9.2s)
+  [random/full] seed=7 F1=0.9945 theta=0.48763 (9.1s)
+  [random/full] seed=8 F1=0.9945 theta=0.48793 (9.0s)
+  [random/full] seed=9 F1=0.9945 theta=0.51566 (9.0s)
+
+--- variant: no_identity (23 features) ---
+  [random/no_identity] seed=0 F1=0.9945 theta=0.27656 (9.0s)
+  [random/no_identity] seed=1 F1=0.9945 theta=0.34678 (9.0s)
+  [random/no_identity] seed=2 F1=0.9945 theta=0.40838 (8.8s)
+  [random/no_identity] seed=3 F1=0.9945 theta=0.39573 (9.1s)
+  [random/no_identity] seed=4 F1=0.9945 theta=0.26479 (8.9s)
+  [random/no_identity] seed=5 F1=0.9945 theta=0.31865 (9.1s)
+  [random/no_identity] seed=6 F1=0.9945 theta=0.36925 (8.9s)
+  [random/no_identity] seed=7 F1=0.9945 theta=0.27616 (9.0s)
+  [random/no_identity] seed=8 F1=0.9945 theta=0.46151 (9.1s)
+  [random/no_identity] seed=9 F1=0.9945 theta=0.26760 (9.4s)
+
+--- variant: behav_only (3 features) ---
+  [random/behav_only] seed=0 F1=0.9895 theta=0.39006 (9.3s)
+  [random/behav_only] seed=1 F1=0.9895 theta=0.37027 (9.2s)
+  [random/behav_only] seed=2 F1=0.9895 theta=0.44950 (9.0s)
+  [random/behav_only] seed=3 F1=0.9895 theta=0.39001 (8.9s)
+  [random/behav_only] seed=4 F1=0.9895 theta=0.41984 (8.8s)
+  [random/behav_only] seed=5 F1=0.9895 theta=0.41647 (9.3s)
+  [random/behav_only] seed=6 F1=0.9895 theta=0.37346 (9.7s)
+  [random/behav_only] seed=7 F1=0.9895 theta=0.37028 (9.4s)
+  [random/behav_only] seed=8 F1=0.9895 theta=0.34020 (9.5s)
+  [random/behav_only] seed=9 F1=0.9895 theta=0.44928 (9.3s)
+
+======================================================================
+TEMPORAL split -- audit-time retrain (full, 26-feat) x 10 seeds
+======================================================================
+  [temporal/full] seed=0 F1=0.9909 theta=0.13744 (8.4s)
+  [temporal/full] seed=1 F1=0.9909 theta=0.14087 (8.5s)
+  [temporal/full] seed=2 F1=0.9909 theta=0.29698 (9.3s)
+  [temporal/full] seed=3 F1=0.9909 theta=0.20729 (8.5s)
+  [temporal/full] seed=4 F1=0.9909 theta=0.15755 (8.4s)
+  [temporal/full] seed=5 F1=0.9909 theta=0.09432 (8.5s)
+  [temporal/full] seed=6 F1=0.9909 theta=0.15095 (8.5s)
+  [temporal/full] seed=7 F1=0.9909 theta=0.15746 (8.5s)
+  [temporal/full] seed=8 F1=0.9909 theta=0.11771 (8.5s)
+  [temporal/full] seed=9 F1=0.9909 theta=0.15745 (8.4s)
+
+  [temporal] lookup table (deterministic, single value): F1=0.9907
+  [random] lookup table (deterministic, single value): F1=0.9942
+
+Saved newCol/rev_task3_multiseed_results.json

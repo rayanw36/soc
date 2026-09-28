@@ -1,0 +1,81 @@
+% REV-C Task 2 -- dataset characterisation table(s), ready to paste.
+% Source: newCol/rev_dataset_characterisation.csv,
+%         newCol/xdet_task0_composition.md, newCol/rev_task1_split.md.
+% Citation: Landauer, Skopik, Wurzenberger, "Introducing a New Alert Data
+% Set for Multi-Step Attack Analysis," CSET '24, DOI 10.1145/3675741.3675748,
+% arXiv:2308.12627 -- independently re-verified via web search for this
+% response (title/authors/venue/DOI all confirmed against the ACM DL page
+% and arXiv abstract page). No explicit semantic version number (e.g. "v2")
+% is recorded anywhere in our local holdings for the AIT-ADS/AIT-LDS
+% download itself; the archive we hold (data/ait_ads/downloads/ait_ads.zip)
+% carries internal file timestamps of 2023-08-20, which is download/package
+% provenance, not a dataset version -- reported as such, not guessed as a
+% version number.
+
+\begin{table}[t]
+\centering
+\caption{AIT-ADS dataset characterisation. Alert counts and rule identities
+were independently re-derived from raw \texttt{*\_wazuh.json} /
+\texttt{*\_aminer.json} files on disk, not taken from prior documentation.}
+\label{tab:dataset-characterisation}
+\begin{tabular}{lr}
+\toprule
+Quantity & Value \\
+\midrule
+Total alerts (all detectors, all 8 scenarios) & 2{,}655{,}821 \\
+\quad Wazuh-native alerts & 2{,}293{,}628 (86.4\%) \\
+\quad Suricata alerts (embedded in Wazuh rule 86601) & 306{,}635 (11.5\%) \\
+\quad AMiner alerts & 55{,}558 (2.1\%) \\
+Distinct detector signatures (total) & 93 \\
+\quad Wazuh & 30 \\
+\quad Suricata & 29 \\
+\quad AMiner & 34 \\
+Rows in our deployed \texttt{ait\_split.npz} (Wazuh only) & 2{,}600{,}263 \\
+\quad Attack & 1{,}717{,}524 (66.05\%) \\
+\quad Benign & 882{,}739 (33.95\%) \\
+Distinct \texttt{rule.id} values in our split & 31 $=$ 30 genuine $+$ 1 (86601, a 29-signature Suricata bucket) \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[t]
+\centering
+\caption{Top-10 Wazuh \texttt{rule.id} values by alert volume in the deployed
+\texttt{ait\_split.npz} corpus (2{,}600{,}263 alerts total). Rule 86601 is
+Wazuh's Suricata-ingestion wrapper and spans 29 distinct underlying
+signatures (rule.description strings), collapsed to one \texttt{rule.id}.}
+\label{tab:top10-rules}
+\begin{tabular}{rlrrrr}
+\toprule
+Rule ID & Description & Total & Attack & Benign & Attack \% \\
+\midrule
+31101 & Web server 400 error code. & 1{,}571{,}313 & 1{,}571{,}057 & 256 & 99.98\% \\
+86601 & Suricata: Alert -- \emph{varies} (29 sigs.) & 306{,}635 & 6{,}018 & 300{,}617 & 1.96\% \\
+20101 & IDS event. & 295{,}032 & 5{,}766 & 289{,}266 & 1.95\% \\
+9701 & Dovecot Authentication Success. & 276{,}855 & 6{,}951 & 269{,}904 & 2.51\% \\
+31151 & Multiple web server 400 error codes from same source ip. & 121{,}794 & 121{,}794 & 0 & 100.00\% \\
+52507 & ClamAV database update & 8{,}407 & 142 & 8{,}265 & 1.69\% \\
+20152 & Multiple IDS alerts for same id. & 7{,}036 & 98 & 6{,}938 & 1.39\% \\
+20151 & Multiple IDS events from same source ip. & 2{,}362 & 56 & 2{,}306 & 2.37\% \\
+30305 & Apache: Attempt to access forbidden file or directory. & 2{,}353 & 2{,}353 & 0 & 100.00\% \\
+31516 & Suspicious URL access. & 1{,}876 & 1{,}876 & 0 & 100.00\% \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[t]
+\centering
+\caption{Train/test split procedure and sizes (see Task 1 for the full
+random-vs-temporal analysis). The deployed split is
+\texttt{sklearn.model\_selection.train\_test\_split(X, y, test\_size=0.20,
+stratify=y, random\_state=42)} -- stratified-random, not temporal.}
+\label{tab:split-sizes}
+\begin{tabular}{lrrrr}
+\toprule
+Split & $n$ & Attack & Benign & Attack \% \\
+\midrule
+Train (80\%, stratified-random) & 2{,}080{,}210 & 1{,}374{,}019 & 706{,}191 & 66.05\% \\
+Test (20\%, stratified-random) & 520{,}053 & 343{,}505 & 176{,}548 & 66.05\% \\
+\bottomrule
+\end{tabular}
+\end{table}

@@ -1,0 +1,67 @@
+{
+  "_meta": {
+    "generated_by": "newCol/v8_task1_train.py, v8_task2_eval.py, v8_task3_lnx_regression.py, v8_task4_l1_routing.py",
+    "recommendation": "platform-routed: keep the 26-feat v5-defer pipeline for Linux (unchanged); route Windows to L2-only C2 (ocsvm_xplatform_v7.pkl, unretrained) at its calibrated threshold; bypass L1 on Windows entirely."
+  },
+  "windows": {
+    "calibration_set": {
+      "source": "testAlerts/Alerts/ossec-alerts-{23,24}.json, high-confidence benign (>=60min outside WINDOWS_ATTACK_WINDOWS), 70/30 split seed=42",
+      "session": "2025-11-23/24 (cross-session vs. the 2026-07-08 attack collection -- flagged per Guard 1)",
+      "n": 3398,
+      "role": "calibration only -- never used to fit any model"
+    },
+    "evaluation_set": {
+      "source": "newCol/collection_benign_win_alerts.json",
+      "session": "2026-07-12 (fresh, matched testbed/agent WIN-CL1, dedicated single session)",
+      "n": 201,
+      "role": "held-out FPR evaluation only -- untouched by training or calibration"
+    },
+    "l2_thresholds": {
+      "C1_win_native": {
+        "theta_calibrated": -0.4604757619445408,
+        "percentile_used": 90,
+        "fpr_at_calibrated_on_calibration": 0.100058858151854,
+        "theta_sign": 0.0,
+        "fpr_at_sign_on_calibration": 0.0765155974102413
+      },
+      "C2_xplatform_v7": {
+        "theta_calibrated": -0.2372209713915367,
+        "percentile_used": 90,
+        "fpr_at_calibrated_on_calibration": 0.1003531489111242,
+        "theta_sign": 0.0,
+        "fpr_at_sign_on_calibration": 0.0650382577987051
+      },
+      "C3_xplatform_v8": {
+        "theta_calibrated": -0.3988828481789819,
+        "percentile_used": 90,
+        "fpr_at_calibrated_on_calibration": 0.100058858151854,
+        "theta_sign": 0.0,
+        "fpr_at_sign_on_calibration": 0.0479693937610359
+      },
+      "REF_linux_only_normalized": {
+        "theta_calibrated": 160.86930826540726,
+        "percentile_used": 90,
+        "fpr_at_calibrated_on_calibration": 0.1271336080047086,
+        "theta_sign": 0.0,
+        "fpr_at_sign_on_calibration": 1.0
+      }
+    },
+    "l1_theta_recalibrated": 0.99286,
+    "l1_routing_recommendation": "bypass -- L1 fires on zero alerts (attack or benign) on fresh evaluation data at this threshold; fully inert"
+  },
+  "linux": {
+    "reference_threshold": {
+      "model": "models_v2/ocsvm_normalized.pkl",
+      "theta_ocsvm_norm": -0.0004195287152697347,
+      "derivation": "phase3_normalized_v7 method: 90th percentile of AIT-ADS test-split benign scores (ait_split.npz) -- unchanged from prior work",
+      "caveat": "This same threshold produces 100% FPR on the FRESH matched Linux benign (n=267, 2026-07-12) -- REF is saturated on any data outside its original AIT-ADS training distribution, not just cross-platform. Not a reliable floor for the same-space regression comparison."
+    },
+    "frozen_v5_production_reference": {
+      "pipeline": "26-feat xgb_model.pkl + ocsvm_nu05.pkl (v5) + rule_confound_fixes_v5.json defer",
+      "novel_recall": 0.8431,
+      "fpr": 0.1086,
+      "f1": 0.8702,
+      "note": "cross-pipeline reference, not same feature space as the 22-feat models above"
+    }
+  }
+}

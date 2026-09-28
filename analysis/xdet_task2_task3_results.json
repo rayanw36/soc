@@ -1,0 +1,166 @@
+{
+  "wazuh_native_task2": {
+    "all": {
+      "stats": {
+        "benign": {
+          "n": 582122,
+          "mean": 33.0143646864403,
+          "median": 23.0,
+          "p90": 69.0,
+          "p95": 97.0,
+          "p99": 183.0,
+          "max": 522.0
+        },
+        "attack": {
+          "n": 1711506,
+          "mean": 19978.93348548004,
+          "median": 21124.0,
+          "p90": 26098.0,
+          "p95": 26656.0,
+          "p99": 27203.0,
+          "max": 27782.0
+        }
+      },
+      "threshold": 183.0,
+      "recall": 0.9924581041492113,
+      "fpr": 0.009877654512284367,
+      "n": 2293628
+    }
+  },
+  "wazuh_native_task3": {
+    "n_signatures_attack_only": 8,
+    "n_signatures_benign_only": 4,
+    "n_signatures_mixed": 18,
+    "alerts_attack_only": 127146,
+    "alerts_benign_only": 238,
+    "alerts_mixed": 2166244,
+    "alerts_attack_only_pct": 5.543444708557796,
+    "alerts_benign_only_pct": 0.010376573707680583,
+    "alerts_mixed_pct": 94.44617871773453,
+    "attack_only_signatures": [
+      "5706",
+      "30305",
+      "31151",
+      "30306",
+      "31516",
+      "31104",
+      "5304",
+      "31510"
+    ]
+  },
+  "suricata_task2": {
+    "all": {
+      "stats": {
+        "benign": {
+          "n": 300617,
+          "mean": 30.845940183023583,
+          "median": 15.0,
+          "p90": 75.0,
+          "p95": 111.0,
+          "p99": 209.0,
+          "max": 519.0
+        },
+        "attack": {
+          "n": 6018,
+          "mean": 30.625789298770357,
+          "median": 19.0,
+          "p90": 77.30000000000018,
+          "p95": 112.0,
+          "p99": 159.82999999999993,
+          "max": 199.0
+        }
+      },
+      "threshold": 209.0,
+      "recall": 0.0,
+      "fpr": 0.009942884134962427,
+      "n": 306635
+    }
+  },
+  "suricata_task3": {
+    "n_signatures_attack_only": 5,
+    "n_signatures_benign_only": 17,
+    "n_signatures_mixed": 7,
+    "alerts_attack_only": 201,
+    "alerts_benign_only": 337,
+    "alerts_mixed": 306097,
+    "alerts_attack_only_pct": 0.06555024703637875,
+    "alerts_benign_only_pct": 0.1099026529913415,
+    "alerts_mixed_pct": 99.82454709997228,
+    "attack_only_signatures": [
+      "Suricata: Alert - SURICATA SMTP no server welcome message",
+      "Suricata: Alert - SURICATA SMTP invalid reply",
+      "Suricata: Alert - SURICATA TLS invalid SSLv2 header",
+      "Suricata: Alert - ET SCAN Possible Nmap User-Agent Observed",
+      "Suricata: Alert - SURICATA TLS invalid record type"
+    ]
+  },
+  "aminer_task2": {
+    "all": {
+      "stats": {
+        "benign": {
+          "n": 8501,
+          "mean": 10.438536642747913,
+          "median": 4.0,
+          "p90": 28.0,
+          "p95": 38.0,
+          "p99": 51.0,
+          "max": 5689.0
+        },
+        "attack": {
+          "n": 47057,
+          "mean": 1481.80687251631,
+          "median": 662.0,
+          "p90": 4028.4000000000015,
+          "p95": 4785.0,
+          "p99": 6237.440000000002,
+          "max": 6702.0
+        }
+      },
+      "threshold": 51.0,
+      "recall": 0.9820643049918184,
+      "fpr": 0.008822491471591578,
+      "n": 55558
+    },
+    "excl_first12h_training_phase": {
+      "stats": {
+        "benign": {
+          "n": 4425,
+          "mean": 10.707570621468927,
+          "median": 4.0,
+          "p90": 30.0,
+          "p95": 39.0,
+          "p99": 49.0,
+          "max": 5689.0
+        },
+        "attack": {
+          "n": 47057,
+          "mean": 1481.80687251631,
+          "median": 662.0,
+          "p90": 4028.4000000000015,
+          "p95": 4785.0,
+          "p99": 6237.440000000002,
+          "max": 6702.0
+        }
+      },
+      "threshold": 49.0,
+      "recall": 0.9825530739316148,
+      "fpr": 0.008135593220338983,
+      "n": 51482
+    },
+    "training_phase_n": 4076,
+    "training_phase_attack_n": 0,
+    "training_phase_benign_n": 4076
+  },
+  "aminer_task3": {
+    "n_signatures_attack_only": 0,
+    "n_signatures_benign_only": 7,
+    "n_signatures_mixed": 27,
+    "alerts_attack_only": 0,
+    "alerts_benign_only": 350,
+    "alerts_mixed": 55208,
+    "alerts_attack_only_pct": 0.0,
+    "alerts_benign_only_pct": 0.6299722812196263,
+    "alerts_mixed_pct": 99.37002771878038,
+    "attack_only_signatures": []
+  }
+}

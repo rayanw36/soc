@@ -1,0 +1,102 @@
+attack_type,attck_code,rule_id,rule_desc,count,total_for_type,pct_of_type
+cracking,T1110,9701,Dovecot Authentication Success.,1974,5271,37.5
+cracking,T1110,86601,Suricata: Alert - SURICATA HTTP unable to match response to request,1621,5271,30.8
+cracking,T1110,20101,IDS event.,1562,5271,29.6
+cracking,T1110,52507,ClamAV database update,44,5271,0.8
+cracking,T1110,20152,Multiple IDS alerts for same id.,35,5271,0.7
+cracking,T1110,20151,Multiple IDS events from same source ip.,11,5271,0.2
+cracking,T1110,20100,First time this IDS alert is generated.,6,5271,0.1
+cracking,T1110,20162,Multiple IDS alerts for same id (ignoring now this id).,6,5271,0.1
+cracking,T1110,9705,Dovecot Invalid User Login Attempt.,3,5271,0.1
+cracking,T1110,31509,CMS (WordPress or Joomla) login attempt.,3,5271,0.1
+cracking,T1110,2501,syslog: User authentication failure.,2,5271,0.0
+cracking,T1110,31101,Web server 400 error code.,2,5271,0.0
+cracking,T1110,5503,PAM: User login failed.,1,5271,0.0
+cracking,T1110,20161,Multiple IDS events from same source ip (ignoring now this srcip and id).,1,5271,0.0
+dirb,T1190,31101,Web server 400 error code.,1544880,1671940,92.4
+dirb,T1190,31151,Multiple web server 400 error codes from same source ip.,119786,1671940,7.2
+dirb,T1190,30305,Apache: Attempt to access forbidden file or directory.,2234,1671940,0.1
+dirb,T1190,31516,Suspicious URL access.,1826,1671940,0.1
+dirb,T1190,86601,Suricata: Alert - SURICATA TLS invalid handshake message,778,1671940,0.0
+dirb,T1190,20101,IDS event.,762,1671940,0.0
+dirb,T1190,31104,Common web attack.,726,1671940,0.0
+dirb,T1190,9701,Dovecot Authentication Success.,567,1671940,0.0
+dirb,T1190,30306,Apache: Attempt to access forbidden directory index.,330,1671940,0.0
+dirb,T1190,31122,Web server 500 error code (Internal Error).,19,1671940,0.0
+dirb,T1190,52507,ClamAV database update,10,1671940,0.0
+dirb,T1190,20152,Multiple IDS alerts for same id.,8,1671940,0.0
+dirb,T1190,20151,Multiple IDS events from same source ip.,6,1671940,0.0
+dirb,T1190,20100,First time this IDS alert is generated.,6,1671940,0.0
+dirb,T1190,31509,CMS (WordPress or Joomla) login attempt.,2,1671940,0.0
+dnsteal,T1048.003,9701,Dovecot Authentication Success.,3924,8603,45.6
+dnsteal,T1048.003,86601,Suricata: Alert - ET INFO Observed DNS Query to .cloud TLD,2285,8603,26.6
+dnsteal,T1048.003,20101,IDS event.,2212,8603,25.7
+dnsteal,T1048.003,52507,ClamAV database update,78,8603,0.9
+dnsteal,T1048.003,20152,Multiple IDS alerts for same id.,31,8603,0.4
+dnsteal,T1048.003,20151,Multiple IDS events from same source ip.,27,8603,0.3
+dnsteal,T1048.003,9705,Dovecot Invalid User Login Attempt.,12,8603,0.1
+dnsteal,T1048.003,2501,syslog: User authentication failure.,8,8603,0.1
+dnsteal,T1048.003,31509,CMS (WordPress or Joomla) login attempt.,7,8603,0.1
+dnsteal,T1048.003,20100,First time this IDS alert is generated.,7,8603,0.1
+dnsteal,T1048.003,20162,Multiple IDS alerts for same id (ignoring now this id).,5,8603,0.1
+dnsteal,T1048.003,5503,PAM: User login failed.,4,8603,0.0
+dnsteal,T1048.003,20161,Multiple IDS events from same source ip (ignoring now this srcip and id).,3,8603,0.0
+network_scans,T1046,86601,Suricata: Alert - SURICATA TLS invalid record/traffic,658,1570,41.9
+network_scans,T1046,20101,IDS event.,643,1570,41.0
+network_scans,T1046,9701,Dovecot Authentication Success.,246,1570,15.7
+network_scans,T1046,20152,Multiple IDS alerts for same id.,8,1570,0.5
+network_scans,T1046,52507,ClamAV database update,8,1570,0.5
+network_scans,T1046,20151,Multiple IDS events from same source ip.,4,1570,0.3
+network_scans,T1046,20162,Multiple IDS alerts for same id (ignoring now this id).,3,1570,0.2
+privilege_escalation,T1548.001/T1003.008,9701,Dovecot Authentication Success.,60,158,38.0
+privilege_escalation,T1548.001/T1003.008,5501,PAM: Login session opened.,25,158,15.8
+privilege_escalation,T1548.001/T1003.008,5402,Successful sudo to ROOT executed.,18,158,11.4
+privilege_escalation,T1548.001/T1003.008,5502,PAM: Login session closed.,16,158,10.1
+privilege_escalation,T1548.001/T1003.008,86601,Suricata: Alert - ET INFO Observed DNS Query to .biz TLD,14,158,8.9
+privilege_escalation,T1548.001/T1003.008,20101,IDS event.,13,158,8.2
+privilege_escalation,T1548.001/T1003.008,5403,First time user executed sudo.,6,158,3.8
+privilege_escalation,T1548.001/T1003.008,5304,User successfully changed UID.,5,158,3.2
+privilege_escalation,T1548.001/T1003.008,20162,Multiple IDS alerts for same id (ignoring now this id).,1,158,0.6
+reverse_shell,T1059.004,86601,Suricata: Alert - ET INFO Observed DNS Query to .biz TLD,24,80,30.0
+reverse_shell,T1059.004,9701,Dovecot Authentication Success.,24,80,30.0
+reverse_shell,T1059.004,20101,IDS event.,22,80,27.5
+reverse_shell,T1059.004,5501,PAM: Login session opened.,5,80,6.2
+reverse_shell,T1059.004,5304,User successfully changed UID.,3,80,3.8
+reverse_shell,T1059.004,20151,Multiple IDS events from same source ip.,1,80,1.2
+reverse_shell,T1059.004,20152,Multiple IDS alerts for same id.,1,80,1.2
+service_scans,T1046,86601,Suricata: Alert - SURICATA SMTP no server welcome message,542,1768,30.7
+service_scans,T1046,20101,IDS event.,465,1768,26.3
+service_scans,T1046,31101,Web server 400 error code.,413,1768,23.4
+service_scans,T1046,30305,Apache: Attempt to access forbidden file or directory.,108,1768,6.1
+service_scans,T1046,9701,Dovecot Authentication Success.,84,1768,4.8
+service_scans,T1046,20100,First time this IDS alert is generated.,59,1768,3.3
+service_scans,T1046,5706,sshd: insecure connection attempt (scan).,44,1768,2.5
+service_scans,T1046,31151,Multiple web server 400 error codes from same source ip.,25,1768,1.4
+service_scans,T1046,20152,Multiple IDS alerts for same id.,11,1768,0.6
+service_scans,T1046,31516,Suspicious URL access.,7,1768,0.4
+service_scans,T1046,20151,Multiple IDS events from same source ip.,5,1768,0.3
+service_scans,T1046,20162,Multiple IDS alerts for same id (ignoring now this id).,2,1768,0.1
+service_scans,T1046,52507,ClamAV database update,2,1768,0.1
+service_scans,T1046,31104,Common web attack.,1,1768,0.1
+service_stop,T1489,20101,IDS event.,2,4,50.0
+service_stop,T1489,86601,Suricata: Alert - ET INFO Observed DNS Query to .biz TLD,2,4,50.0
+webshell,T1505.003,86601,Suricata: Alert - ET INFO Observed DNS Query to .biz TLD,38,109,34.9
+webshell,T1505.003,20101,IDS event.,33,109,30.3
+webshell,T1505.003,9701,Dovecot Authentication Success.,33,109,30.3
+webshell,T1505.003,20152,Multiple IDS alerts for same id.,3,109,2.8
+webshell,T1505.003,20100,First time this IDS alert is generated.,2,109,1.8
+wpscan,T1595.002,31101,Web server 400 error code.,25762,28021,91.9
+wpscan,T1595.002,31151,Multiple web server 400 error codes from same source ip.,1983,28021,7.1
+wpscan,T1595.002,86601,Suricata: Alert - ET INFO Observed DNS Query to .biz TLD,56,28021,0.2
+wpscan,T1595.002,20101,IDS event.,52,28021,0.2
+wpscan,T1595.002,31516,Suspicious URL access.,43,28021,0.2
+wpscan,T1595.002,9701,Dovecot Authentication Success.,39,28021,0.1
+wpscan,T1595.002,31122,Web server 500 error code (Internal Error).,30,28021,0.1
+wpscan,T1595.002,31509,CMS (WordPress or Joomla) login attempt.,27,28021,0.1
+wpscan,T1595.002,30305,Apache: Attempt to access forbidden file or directory.,11,28021,0.0
+wpscan,T1595.002,30306,Apache: Attempt to access forbidden directory index.,8,28021,0.0
+wpscan,T1595.002,31104,Common web attack.,3,28021,0.0
+wpscan,T1595.002,31510,CMS (WordPress or Joomla) brute force attempt.,3,28021,0.0
+wpscan,T1595.002,20151,Multiple IDS events from same source ip.,2,28021,0.0
+wpscan,T1595.002,20152,Multiple IDS alerts for same id.,1,28021,0.0
+wpscan,T1595.002,20100,First time this IDS alert is generated.,1,28021,0.0
