@@ -1,0 +1,50 @@
+cff-version: 1.2.0
+message: "If you use this repository, please cite the paper below. Its DOI, and the DOI of the archived release of this repository, will be added on publication."
+title: "Rule-Identity Shortcuts and Benign-Corpus Confounds in SIEM Alert-Triage Evaluation"
+type: software
+authors:
+  - given-names: Rayen
+    family-names: Chikhaoui
+    affiliation: "Department of Computer Engineering, King Fahd University of Petroleum and Minerals (KFUPM), Dhahran, Saudi Arabia"
+  - given-names: Mohammad
+    family-names: Arwani
+    affiliation: "Department of Computer Engineering, King Fahd University of Petroleum and Minerals (KFUPM), Dhahran, Saudi Arabia"
+  - given-names: Abdulaziz
+    family-names: Barnawi
+    affiliation: "Department of Computer Engineering, King Fahd University of Petroleum and Minerals (KFUPM), Dhahran, Saudi Arabia"
+  - given-names: Farid
+    family-names: Binbeshr
+    affiliation: "Department of Computer Engineering, King Fahd University of Petroleum and Minerals (KFUPM), Dhahran, Saudi Arabia; Interdisciplinary Research Center for Intelligent Secure Systems (IRC-ISS), KFUPM"
+  - given-names: Muhammad
+    family-names: Imam
+    orcid: "https://orcid.org/0000-0001-9131-6964"
+    affiliation: "Department of Computer Engineering, King Fahd University of Petroleum and Minerals (KFUPM), Dhahran, Saudi Arabia; Interdisciplinary Research Center for Intelligent Secure Systems (IRC-ISS), KFUPM"
+repository-code: "https://github.com/rayanw36/soc"
+license: MIT
+abstract: "Artifact for a paper on rule-identity shortcuts in SIEM alert-triage evaluation: code, controls, analysis scripts and the testbed data behind the paper's figures and tables. A majority-label-per-rule-identifier lookup table matches a trained two-layer Wazuh triage pipeline on the AIT-ADS benchmark, the effect is detector-specific, and on the authors' own Linux and Windows testbed collections several apparently strong results are artifacts of capture tempo, benign-corpus composition or small samples. The repository contains the five evaluation controls (C1-C5), the scripts that reproduce every figure and table, and the testbed collection. Code is MIT-licensed; data produced by the authors is CC BY 4.0 (LICENSE-DATA); files derived from AIT-ADS stay CC BY 4.0 with attribution to Landauer, Skopik and Wurzenberger."
+keywords:
+  - alert triage
+  - SIEM
+  - Wazuh
+  - AIT-ADS
+  - shortcut learning
+  - evaluation methodology
+preferred-citation:
+  type: article
+  title: "Rule-Identity Shortcuts and Benign-Corpus Confounds in SIEM Alert-Triage Evaluation"
+  authors:
+    - given-names: Rayen
+      family-names: Chikhaoui
+    - given-names: Mohammad
+      family-names: Arwani
+    - given-names: Abdulaziz
+      family-names: Barnawi
+    - given-names: Farid
+      family-names: Binbeshr
+    - given-names: Muhammad
+      family-names: Imam
+      orcid: "https://orcid.org/0000-0001-9131-6964"
+  journal: "Computers & Security"
+  year: 2026
+  status: submitted
+  notes: "Submitted to Computers & Security; no DOI yet."

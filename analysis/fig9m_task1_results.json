@@ -1,0 +1,68 @@
+{
+  "rows": [
+    {
+      "detector": "Wazuh-native",
+      "series": "lookup",
+      "precision": 0.9998263137597773,
+      "recall": 0.9921680323678483,
+      "f1": 0.995982451818747,
+      "fpr": 0.0005077365277706064
+    },
+    {
+      "detector": "Wazuh-native",
+      "series": "trivial",
+      "precision": 0.7465699199811566,
+      "recall": 1.0,
+      "f1": 0.8548984056581156,
+      "fpr": 1.0
+    },
+    {
+      "detector": "Suricata",
+      "series": "lookup",
+      "precision": 1.0,
+      "recall": 0.02773109243697479,
+      "f1": 0.05396565821749796,
+      "fpr": 0.0
+    },
+    {
+      "detector": "Suricata",
+      "series": "trivial",
+      "precision": 0.01933827353094124,
+      "recall": 1.0,
+      "f1": 0.03794279883939674,
+      "fpr": 1.0
+    },
+    {
+      "detector": "AMiner",
+      "series": "lookup",
+      "precision": 0.961352657004831,
+      "recall": 0.9937314067148322,
+      "f1": 0.9772739146335092,
+      "fpr": 0.2211764705882353
+    },
+    {
+      "detector": "AMiner",
+      "series": "trivial",
+      "precision": 0.8470122390208783,
+      "recall": 1.0,
+      "f1": 0.9171701422724615,
+      "fpr": 1.0
+    },
+    {
+      "detector": "Wazuh-native",
+      "series": "model",
+      "precision": 0.9999852821269093,
+      "recall": 0.9924134203876547,
+      "f1": 0.996184963301165,
+      "fpr": 4.302851930259376e-05
+    },
+    {
+      "detector": "Suricata",
+      "series": "model",
+      "precision": 0.9807692307692307,
+      "recall": 0.04285714285714286,
+      "f1": 0.0821256038647343,
+      "fpr": 1.6571106618499983e-05
+    }
+  ]
+}

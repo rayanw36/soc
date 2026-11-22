@@ -1,0 +1,43 @@
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Python caches and packaging
+__pycache__/
+*.pyc
+*.egg-info/
+.pytest_cache/
+.ipynb_checkpoints/
+
+# AIT-ADS raw download only (about 2.9 GB, fetched by data/download_ait_ads.py, not
+# redistributed here -- see data/README.md). data/testbed_collection/, data/README.md and
+# data/download_ait_ads.py are this project's own small files and must stay tracked --
+# do not broaden this back to a bare "data/".
+data/ait_ads/
+testAlerts/
+*.zip
+
+# Raw AMiner log lines written by analysis/xdet_aminer_signature_check.py (derived from the
+# AIT Log Data Set, CC BY-NC-SA 4.0: regenerate locally, do not redistribute)
+analysis/xdet_aminer_dominant_sig_records.csv
+
+# Unpublished manuscript and private working material
+paper/
+release_holdback/
+
+# Secrets
+.env
+*.pem
+*.key
+
+# Editor, tool and OS folders
+.vscode/
+.idea/
+.claude/
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Intermediate pickles written by analysis/v8_fim_task1.py
+analysis/_v8_fim_*.pkl

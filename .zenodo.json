@@ -1,0 +1,47 @@
+{
+  "title": "Rule-Identity Shortcuts and Benign-Corpus Confounds in SIEM Alert-Triage Evaluation",
+  "upload_type": "software",
+  "access_right": "open",
+  "license": "mit",
+  "language": "eng",
+  "creators": [
+    {
+      "name": "Chikhaoui, Rayen",
+      "affiliation": "Department of Computer Engineering, King Fahd University of Petroleum and Minerals (KFUPM), Dhahran, Saudi Arabia"
+    },
+    {
+      "name": "Arwani, Mohammad",
+      "affiliation": "Department of Computer Engineering, King Fahd University of Petroleum and Minerals (KFUPM), Dhahran, Saudi Arabia"
+    },
+    {
+      "name": "Barnawi, Abdulaziz",
+      "affiliation": "Department of Computer Engineering, King Fahd University of Petroleum and Minerals (KFUPM), Dhahran, Saudi Arabia"
+    },
+    {
+      "name": "Binbeshr, Farid",
+      "affiliation": "Department of Computer Engineering, King Fahd University of Petroleum and Minerals (KFUPM), Dhahran, Saudi Arabia; Interdisciplinary Research Center for Intelligent Secure Systems (IRC-ISS), KFUPM"
+    },
+    {
+      "name": "Imam, Muhammad",
+      "affiliation": "Department of Computer Engineering, King Fahd University of Petroleum and Minerals (KFUPM), Dhahran, Saudi Arabia; Interdisciplinary Research Center for Intelligent Secure Systems (IRC-ISS), KFUPM",
+      "orcid": "0000-0001-9131-6964"
+    }
+  ],
+  "description": "<p>Artifact for the paper <em>Rule-Identity Shortcuts and Benign-Corpus Confounds in SIEM Alert-Triage Evaluation</em>, submitted to Computers &amp; Security (no DOI yet; it will be added on publication).</p><p>A majority-label-per-rule-identifier lookup table matches a trained two-layer Wazuh alert-triage pipeline (XGBoost for known attacks, a one-class SVM for novel ones) on the AIT-ADS benchmark. The effect is detector-specific, and on the authors' own Linux and Windows testbed collections several apparently strong results turn out to be artifacts of capture tempo, benign-corpus composition or small samples. The repository contains the five evaluation controls (C1-C5), the scripts that reproduce every figure and table of the paper (<code>reproduce.sh</code>), and the testbed collection.</p><p><strong>Licences.</strong> Code and documentation: MIT (<code>LICENSE</code>). Data produced by the authors (testbed collection, result tables): CC BY 4.0 (<code>LICENSE-DATA</code>). Files derived from the AIT Alert Data Set (Landauer, Skopik and Wurzenberger, <a href=\"https://doi.org/10.5281/zenodo.8263181\">10.5281/zenodo.8263181</a>, CC BY 4.0) remain CC BY 4.0 and require attribution to its authors. The raw AIT-ADS files are not included; <code>data/download_ait_ads.py</code> downloads and verifies them.</p>",
+  "keywords": [
+    "alert triage",
+    "SIEM",
+    "Wazuh",
+    "AIT-ADS",
+    "shortcut learning",
+    "evaluation methodology"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "10.5281/zenodo.8263181",
+      "relation": "isDerivedFrom",
+      "scheme": "doi"
+    }
+  ],
+  "notes": "Repository: https://github.com/rayanw36/soc. The accompanying paper has been submitted to Computers & Security and has no DOI yet."
+}

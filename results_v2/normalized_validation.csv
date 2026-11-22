@@ -1,0 +1,12 @@
+dataset,metric,value,status,target
+ait_ads_test_norm,F1_combined,0.9685750889679715,MET,≥0.95
+ait_ads_test_norm,FNR,0.009586468901471634,MET,≤5%
+ait_ads_test_norm,FPR_combined,0.10639033010852572,INFO,—
+ait_ads_test_norm,L2_recall,0.9903989752696467,INFO,—
+lnx_dmz_norm,F1_combined,0.9998896856039713,INFO,—
+lnx_dmz_norm,FNR,0.0,INFO,—
+windows_norm,F1_combined,0.021358922767373473,PROVISIONAL,>0 (R6)
+windows_norm,FNR,0.0,PROVISIONAL,—
+windows_norm,FPR_combined,1.0,PROVISIONAL,—
+windows_norm,L1_fired,11971.0,INFO,—
+windows_norm,L2_fired,12784.0,INFO,—

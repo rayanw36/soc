@@ -1,0 +1,11 @@
+rule_id,description,total_alerts,attack_count,benign_count,attack_share_pct
+31101,Web server 400 error code.,1571313,1571057,256,99.98
+86601,"Suricata: Alert - <varies, 29 distinct signatures under this rule.id>",306635,6018,300617,1.96
+20101,IDS event.,295032,5766,289266,1.95
+9701,Dovecot Authentication Success.,276855,6951,269904,2.51
+31151,Multiple web server 400 error codes from same source ip.,121794,121794,0,100.0
+52507,ClamAV database update,8407,142,8265,1.69
+20152,Multiple IDS alerts for same id.,7036,98,6938,1.39
+20151,Multiple IDS events from same source ip.,2362,56,2306,2.37
+30305,Apache: Attempt to access forbidden file or directory.,2353,2353,0,100.0
+31516,Suspicious URL access.,1876,1876,0,100.0

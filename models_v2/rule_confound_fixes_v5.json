@@ -1,0 +1,21 @@
+{
+  "31101": {
+    "mech": "defer"
+  },
+  "31151": {
+    "mech": "defer"
+  },
+  "5710": {
+    "mech": "defer"
+  },
+  "5501": {
+    "mech": "defer"
+  },
+  "_meta": {
+    "scope": "agent_criticality == 1 (lnx-dmz)",
+    "5501_guard_evaluated": true,
+    "5501_guard_threshold_youden": 0.05,
+    "5501_choice": "defer",
+    "5501_reason": "guard signal (high_sev_ratio_20) does not transfer: all real lnx novel-5501 alerts have high_sev_ratio_20=0, so guard==defer on recall but defer has lower benign FPR"
+  }
+}

@@ -1,0 +1,245 @@
+{
+  "wazuh_native": {
+    "label": "Wazuh-native (rule.id)",
+    "n_total": 2293628,
+    "n_signatures": 30,
+    "bands": [
+      {
+        "band": "=1.0 (exclusive)",
+        "n_sig": 12,
+        "volume": 127384,
+        "pct": 5.553821282265476
+      },
+      {
+        "band": "[0.99, 1.0)",
+        "n_sig": 2,
+        "volume": 1571991,
+        "pct": 68.53731293827944
+      },
+      {
+        "band": "[0.95, 0.99)",
+        "n_sig": 9,
+        "volume": 592888,
+        "pct": 25.84935307730809
+      },
+      {
+        "band": "[0.90, 0.95)",
+        "n_sig": 1,
+        "volume": 408,
+        "pct": 0.01778841207030957
+      },
+      {
+        "band": "[0.75, 0.90)",
+        "n_sig": 4,
+        "volume": 877,
+        "pct": 0.03823636614132719
+      },
+      {
+        "band": "<0.75",
+        "n_sig": 2,
+        "volume": 80,
+        "pct": 0.003487923935354818
+      }
+    ],
+    "exposure_99_pct": 74.09113422054492,
+    "top5": {
+      "31101": {
+        "n": 1571313,
+        "purity": 0.9998370789269866,
+        "direction": "attack-leaning",
+        "attack": 1571057,
+        "benign": 256
+      },
+      "20101": {
+        "n": 295032,
+        "purity": 0.9804563572764988,
+        "direction": "benign-leaning",
+        "attack": 5766,
+        "benign": 289266
+      },
+      "9701": {
+        "n": 276855,
+        "purity": 0.9748929945278214,
+        "direction": "benign-leaning",
+        "attack": 6951,
+        "benign": 269904
+      },
+      "31151": {
+        "n": 121794,
+        "purity": 1.0,
+        "direction": "attack-leaning",
+        "attack": 121794,
+        "benign": 0
+      },
+      "52507": {
+        "n": 8407,
+        "purity": 0.9831093136671821,
+        "direction": "benign-leaning",
+        "attack": 142,
+        "benign": 8265
+      }
+    }
+  },
+  "suricata": {
+    "label": "Suricata (rule.description, rule 86601)",
+    "n_total": 306635,
+    "n_signatures": 29,
+    "bands": [
+      {
+        "band": "=1.0 (exclusive)",
+        "n_sig": 22,
+        "volume": 538,
+        "pct": 0.17545290002772027
+      },
+      {
+        "band": "[0.99, 1.0)",
+        "n_sig": 0,
+        "volume": 0,
+        "pct": 0.0
+      },
+      {
+        "band": "[0.95, 0.99)",
+        "n_sig": 6,
+        "volume": 306085,
+        "pct": 99.82063365238803
+      },
+      {
+        "band": "[0.90, 0.95)",
+        "n_sig": 0,
+        "volume": 0,
+        "pct": 0.0
+      },
+      {
+        "band": "[0.75, 0.90)",
+        "n_sig": 1,
+        "volume": 12,
+        "pct": 0.003913447584261418
+      },
+      {
+        "band": "<0.75",
+        "n_sig": 0,
+        "volume": 0,
+        "pct": 0.0
+      }
+    ],
+    "exposure_99_pct": 0.17545290002772027,
+    "top5": {
+      "Suricata: Alert - SURICATA TLS invalid record/traffic": {
+        "n": 105043,
+        "purity": 0.9773140523404701,
+        "direction": "benign-leaning",
+        "attack": 2383,
+        "benign": 102660
+      },
+      "Suricata: Alert - SURICATA TLS invalid handshake message": {
+        "n": 105016,
+        "purity": 0.9775653233792946,
+        "direction": "benign-leaning",
+        "attack": 2356,
+        "benign": 102660
+      },
+      "Suricata: Alert - ET INFO Observed DNS Query to .biz TLD": {
+        "n": 91761,
+        "purity": 0.9889168601039657,
+        "direction": "benign-leaning",
+        "attack": 1017,
+        "benign": 90744
+      },
+      "Suricata: Alert - ET POLICY GNU/Linux APT User-Agent Outbound likely related to package management": {
+        "n": 3422,
+        "purity": 0.989187609585038,
+        "direction": "benign-leaning",
+        "attack": 37,
+        "benign": 3385
+      },
+      "Suricata: Alert - ET INFO Observed DNS Query to .cloud TLD": {
+        "n": 464,
+        "purity": 0.9762931034482759,
+        "direction": "benign-leaning",
+        "attack": 11,
+        "benign": 453
+      }
+    }
+  },
+  "aminer": {
+    "label": "AMiner (AnalysisComponentName)",
+    "n_total": 55558,
+    "n_signatures": 34,
+    "bands": [
+      {
+        "band": "=1.0 (exclusive)",
+        "n_sig": 7,
+        "volume": 350,
+        "pct": 0.6299722812196263
+      },
+      {
+        "band": "[0.99, 1.0)",
+        "n_sig": 2,
+        "volume": 29123,
+        "pct": 52.419093559883365
+      },
+      {
+        "band": "[0.95, 0.99)",
+        "n_sig": 10,
+        "volume": 15730,
+        "pct": 28.312754238813493
+      },
+      {
+        "band": "[0.90, 0.95)",
+        "n_sig": 4,
+        "volume": 2077,
+        "pct": 3.738435508837611
+      },
+      {
+        "band": "[0.75, 0.90)",
+        "n_sig": 7,
+        "volume": 8059,
+        "pct": 14.505561755282768
+      },
+      {
+        "band": "<0.75",
+        "n_sig": 4,
+        "volume": 219,
+        "pct": 0.3941826559631376
+      }
+    ],
+    "exposure_99_pct": 53.049065841102994,
+    "top5": {
+      "AMiner: New request method in Apache Access log.": {
+        "n": 27342,
+        "purity": 0.9973301148416356,
+        "direction": "attack-leaning",
+        "attack": 27269,
+        "benign": 73
+      },
+      "AMiner: New characters in Apache Access request.": {
+        "n": 10366,
+        "purity": 0.9696121937102065,
+        "direction": "attack-leaning",
+        "attack": 10051,
+        "benign": 315
+      },
+      "AMiner: New event type.": {
+        "n": 7660,
+        "purity": 0.8206266318537859,
+        "direction": "attack-leaning",
+        "attack": 6286,
+        "benign": 1374
+      },
+      "AMiner: New status code in Apache Access log.": {
+        "n": 3220,
+        "purity": 0.9717391304347827,
+        "direction": "attack-leaning",
+        "attack": 3129,
+        "benign": 91
+      },
+      "AMiner: High entropy in DNS domain.": {
+        "n": 1781,
+        "purity": 0.9966311061201573,
+        "direction": "benign-leaning",
+        "attack": 6,
+        "benign": 1775
+      }
+    }
+  }
+}

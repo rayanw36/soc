@@ -1,0 +1,17 @@
+{
+  "theta_xgb": 0.07537688442211056,
+  "theta_ocsvm": -0.3349956708403319,
+  "zero_day_layer": "ocsvm_nu05",
+  "zero_day_layer_replaced": "memae",
+  "ocsvm_recall_at_10pct_fpr": 0.7209,
+  "ocsvm_fpr_at_threshold": 0.0975,
+  "ocsvm_best_f1": 0.6078,
+  "note_on_recall": "nu=0.05 achieves 72.1% recall @10%FPR (NOT the 76.7% sometimes quoted \u2014 that was nu=0.10); chosen for best F1 (0.608) and stability across 5%/10% FPR.",
+  "known_limitations": [
+    "T1548.001 SUID discovery not detected by any tested anomaly model \u2014 feature gap, not threshold issue"
+  ],
+  "novel_attack_sample_size": 43,
+  "novel_attack_techniques_represented": 4,
+  "novel_attack_techniques_total": 14,
+  "validation_status": "provisional \u2014 pending re-run of 8 empty attack windows"
+}

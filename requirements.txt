@@ -1,0 +1,27 @@
+# Environment this repository's scripts were verified under: Python 3.11.9 in a fresh
+# virtual environment (reproduce.sh: figures/, analysis/, controls/ all ran with these versions).
+#
+# matplotlib is pinned to 3.10.7 on purpose: it is the version the committed figures were made
+# with. With 3.11.x every regenerated figure differs from the committed one; with 3.10.7 the PDFs
+# differ only in their creation date and the PNGs are pixel-identical.
+#
+# The original manuscript training run (results_v2/phase1_run.log) used python 3.12.3 / pandas
+# 3.0.3 / shap 0.52.0; numpy, scikit-learn and xgboost -- the three packages that touch model
+# fitting and scoring here -- are identical to that run. See docs/rev_model_config.md.
+
+numpy==2.4.6
+pandas==2.3.3
+scikit-learn==1.9.0
+xgboost==3.2.0
+scipy==1.17.1
+joblib==1.6.0
+matplotlib==3.10.7
+shap==0.51.0
+
+# only needed for labelling/build_sysmon_tree.py, which only runs if you have the excluded
+# data/testbed_collection/sysmon_wincl1.evtx raw Sysmon export (see data/README.md)
+python-evtx==0.8.1
+
+# Not installed by default: anomaly_model_comparison.py (the original OC-SVM comparison script,
+# which also needs files that are not distributed) imports torch for its MemAE baseline.
+# torch>=2.6

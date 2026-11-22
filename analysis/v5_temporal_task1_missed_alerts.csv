@@ -1,0 +1,2 @@
+desc_len,rule_level,kw_scan,kw_brute,kw_password,kw_denied,kw_root,kw_privilege,kw_sql,kw_shell,kw_trojan,kw_virus,mitre_tactic_id,is_auth_failure,is_web_attack,rule_id_encoded,agent_criticality,alert_rate_1min,failed_login_5min,unique_src_ip_10min,high_sev_ratio_20,rule_diversity_10min,time_since_last_high,scan_preceded,brute_preceded,kill_chain_stage,label,technique,rule_id,l1_hit,l2_hit
+25.0,5.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,-1.0,0.0,0.0,554.0,1.0,20.0,0.0,0.0,0.0,3.0,999.0,0.0,0.0,2.0,attack,T1546.004,554,False,False

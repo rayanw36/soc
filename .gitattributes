@@ -1,0 +1,8 @@
+* text=auto eol=lf
+
+# never touch the bytes of binary artifacts
+*.pkl binary
+*.npz binary
+*.pth binary
+*.pdf binary
+*.png binary

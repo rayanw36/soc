@@ -1,0 +1,13 @@
+task,scope,set,n,tp,fn,recall,fnr,f1,fpr,l1_recall,l2_recall,either_recall
+1_known,31101/31151,L1,22250,22241.0,9.0,0.9995955056179775,0.0004044943820224719,not_computable,not_computable,,,
+2_novel,T1053.003,discriminative,6,,,,,,,0.33333333333333326,1.0,1.0
+2_novel,T1098.004,discriminative,6,,,,,,,0.0,1.0,1.0
+2_novel,T1110.001,discriminative,119,,,,,,,0.9663865546218487,0.226890756302521,1.0
+2_novel,T1136.001,discriminative,163,,,,,,,0.37423312883435583,0.7423312883435584,0.7975460122699386
+2_novel,T1543.002,discriminative,6,,,,,,,0.5,1.0,1.0
+2_novel,T1546.004,discriminative,6,,,,,,,0.8333333333333335,0.5,0.8333333333333335
+2_incidental,5402/5501/5502/80711/1010,incidental,213,,,,,,,0.4835680751173709,0.7981220657276995,
+c_fpr,linux,benign,19,,,,,,not_computable,,,
+3_crossplatform,T1110.001,windows_normalized,241,,,,,,,0.5518672199170125,1.0,1.0
+3_crossplatform,T1136.001,windows_normalized,8,,,,,,,0.625,1.0,1.0
+3_fpr,windows,benign,3,,,,,,not_computable,,,

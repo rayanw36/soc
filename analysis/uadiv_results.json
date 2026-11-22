@@ -1,0 +1,705 @@
+{
+  "task1_coverage": {
+    "AIT-ADS Wazuh-native": {
+      "n": 2293628,
+      "n_with_ua": 1696191,
+      "coverage_pct": 73.95231484791779
+    },
+    "AIT-ADS Suricata (86601)": {
+      "n": 306635,
+      "n_with_ua": 3597,
+      "coverage_pct": 1.1730559133823601
+    },
+    "AIT-ADS AMiner": {
+      "n": 55558,
+      "n_with_ua": 41373,
+      "coverage_pct": 74.46812340257028
+    },
+    "Our Linux attack": {
+      "n": 22769,
+      "n_with_ua": 22284,
+      "coverage_pct": 97.86991084369099
+    },
+    "Our Linux benign": {
+      "n": 267,
+      "n_with_ua": 209,
+      "coverage_pct": 78.27715355805243
+    },
+    "Our Windows attack": {
+      "n": 336,
+      "n_with_ua": 0,
+      "coverage_pct": 0.0
+    },
+    "Our Windows benign": {
+      "n": 201,
+      "n_with_ua": 0,
+      "coverage_pct": 0.0
+    }
+  },
+  "task2_diversity": {
+    "AIT-ADS Wazuh-native": {
+      "field": "user_agent",
+      "attack": {
+        "n_total": 1711506,
+        "n_with_field": 1695548,
+        "field_coverage_pct": 99.06760478783013,
+        "n_distinct": 7,
+        "top1_share": 0.9837834139758945,
+        "top3_share": 0.9999598949720091,
+        "norm_entropy": 0.04306965941716017,
+        "top_values": [
+          [
+            "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)",
+            1668052
+          ],
+          [
+            "WPScan v3.8.20 (https://wpscan.com/wordpress-security-scanner)",
+            27269
+          ],
+          [
+            "Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html)",
+            159
+          ],
+          [
+            "-",
+            54
+          ],
+          [
+            "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:86.0) Gecko/20100101 Firefox/86.0",
+            7
+          ]
+        ]
+      },
+      "benign": {
+        "n_total": 582122,
+        "n_with_field": 643,
+        "field_coverage_pct": 0.11045794524171909,
+        "n_distinct": 3,
+        "top1_share": 0.5474339035769828,
+        "top3_share": 1.0,
+        "norm_entropy": 0.763521030250885,
+        "top_values": [
+          [
+            "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/97.0.4692.71 Safari/537.36",
+            352
+          ],
+          [
+            "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:86.0) Gecko/20100101 Firefox/86.0",
+            261
+          ],
+          [
+            "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/95.0.4638.69 Safari/537.36",
+            30
+          ]
+        ]
+      },
+      "overlap": {
+        "n_shared_values": 3,
+        "n_distinct_attack": 7,
+        "n_distinct_benign": 3,
+        "attack_volume_in_shared_pct": 0.0008256917527548615,
+        "benign_volume_in_shared_pct": 100.0,
+        "shared_values_sample": [
+          "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:86.0) Gecko/20100101 Firefox/86.0",
+          "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/97.0.4692.71 Safari/537.36",
+          "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/95.0.4638.69 Safari/537.36"
+        ]
+      }
+    },
+    "AIT-ADS Suricata (86601)": {
+      "field": "user_agent",
+      "attack": {
+        "n_total": 6018,
+        "n_with_field": 175,
+        "field_coverage_pct": 2.90794283815221,
+        "n_distinct": 2,
+        "top1_share": 0.7885714285714286,
+        "top3_share": 1.0,
+        "norm_entropy": 0.7442045428971376,
+        "top_values": [
+          [
+            "Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html)",
+            138
+          ],
+          [
+            "Debian APT-HTTP/1.3 (1.6.12ubuntu0.2)",
+            37
+          ]
+        ]
+      },
+      "benign": {
+        "n_total": 300617,
+        "n_with_field": 3422,
+        "field_coverage_pct": 1.1383255105333365,
+        "n_distinct": 4,
+        "top1_share": 0.6116306253652835,
+        "top3_share": 0.994739918176505,
+        "norm_entropy": 0.522894873353833,
+        "top_values": [
+          [
+            "Debian APT-HTTP/1.3 (1.6.12ubuntu0.2)",
+            2093
+          ],
+          [
+            "Debian APT-HTTP/1.3 (1.6.14)",
+            1292
+          ],
+          [
+            "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:86.0) Gecko/20100101 Firefox/86.0",
+            19
+          ],
+          [
+            "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/97.0.4692.71 Safari/537.36",
+            18
+          ]
+        ]
+      },
+      "overlap": {
+        "n_shared_values": 1,
+        "n_distinct_attack": 2,
+        "n_distinct_benign": 4,
+        "attack_volume_in_shared_pct": 21.142857142857142,
+        "benign_volume_in_shared_pct": 61.163062536528344,
+        "shared_values_sample": [
+          "Debian APT-HTTP/1.3 (1.6.12ubuntu0.2)"
+        ]
+      }
+    },
+    "AIT-ADS AMiner": {
+      "field": "user_agent",
+      "attack": {
+        "n_total": 47057,
+        "n_with_field": 40501,
+        "field_coverage_pct": 86.06796013345517,
+        "n_distinct": 9,
+        "top1_share": 0.6752178958544234,
+        "top3_share": 0.9975062344139651,
+        "norm_entropy": 0.29882625926849893,
+        "top_values": [
+          [
+            "WPScan v3.8.20 (https://wpscan.com/wordpress-security-scanner)",
+            27347
+          ],
+          [
+            "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)",
+            12998
+          ],
+          [
+            "-",
+            55
+          ],
+          [
+            "Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html)",
+            54
+          ],
+          [
+            "python-requests/2.27.1",
+            34
+          ]
+        ]
+      },
+      "benign": {
+        "n_total": 8501,
+        "n_with_field": 872,
+        "field_coverage_pct": 10.257616750970474,
+        "n_distinct": 9,
+        "top1_share": 0.5057339449541285,
+        "top3_share": 0.9151376146788991,
+        "norm_entropy": 0.5897568873515241,
+        "top_values": [
+          [
+            "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:86.0) Gecko/20100101 Firefox/86.0",
+            441
+          ],
+          [
+            "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/97.0.4692.71 Safari/537.36",
+            239
+          ],
+          [
+            "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/95.0.4638.69 Safari/537.36",
+            118
+          ],
+          [
+            "Apache/2.4.29 (Ubuntu) OpenSSL/1.1.1 (internal dummy connection)",
+            31
+          ],
+          [
+            "-",
+            24
+          ]
+        ]
+      },
+      "overlap": {
+        "n_shared_values": 5,
+        "n_distinct_attack": 9,
+        "n_distinct_benign": 9,
+        "attack_volume_in_shared_pct": 0.1678970889607664,
+        "benign_volume_in_shared_pct": 97.8211009174312,
+        "shared_values_sample": [
+          "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/95.0.4638.69 Safari/537.36",
+          "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/97.0.4692.71 Safari/537.36",
+          "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:86.0) Gecko/20100101 Firefox/86.0",
+          "Apache/2.4.29 (Ubuntu) OpenSSL/1.1.1 (internal dummy connection)",
+          "-"
+        ]
+      }
+    },
+    "Our Linux (attack vs benign collections)": {
+      "field": "user_agent",
+      "attack": {
+        "n_total": 22769,
+        "n_with_field": 22284,
+        "field_coverage_pct": 97.86991084369099,
+        "n_distinct": 1,
+        "top1_share": 1.0,
+        "top3_share": 1.0,
+        "norm_entropy": 0.0,
+        "top_values": [
+          [
+            "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)",
+            22284
+          ]
+        ]
+      },
+      "benign": {
+        "n_total": 267,
+        "n_with_field": 209,
+        "field_coverage_pct": 78.27715355805243,
+        "n_distinct": 1,
+        "top1_share": 1.0,
+        "top3_share": 1.0,
+        "norm_entropy": 0.0,
+        "top_values": [
+          [
+            "curl/8.5.0",
+            209
+          ]
+        ]
+      },
+      "overlap": {
+        "n_shared_values": 0,
+        "n_distinct_attack": 1,
+        "n_distinct_benign": 1,
+        "attack_volume_in_shared_pct": 0.0,
+        "benign_volume_in_shared_pct": 0.0,
+        "shared_values_sample": []
+      }
+    }
+  },
+  "task3_other_fields": {
+    "AIT-ADS Wazuh-native": {
+      "srcip": {
+        "field": "srcip",
+        "attack": {
+          "n_total": 1711506,
+          "n_with_field": 1704325,
+          "field_coverage_pct": 99.580427997331,
+          "n_distinct": 298,
+          "top1_share": 0.2505554985111408,
+          "top3_share": 0.7406468836636205,
+          "norm_entropy": 0.2621647139968321,
+          "top_values": [
+            [
+              "10.182.193.78",
+              427028
+            ],
+            [
+              "10.38.243.125",
+              419632
+            ],
+            [
+              "10.237.1.238",
+              415643
+            ],
+            [
+              "172.17.130.196",
+              410720
+            ],
+            [
+              "172.21.128.119",
+              7768
+            ]
+          ]
+        },
+        "benign": {
+          "n_total": 582122,
+          "n_with_field": 303231,
+          "field_coverage_pct": 52.09062705068697,
+          "n_distinct": 4187,
+          "top1_share": 0.08918942984061656,
+          "top3_share": 0.23280931039372624,
+          "norm_entropy": 0.5306170672745645,
+          "top_values": [
+            [
+              "172.28.192.4",
+              27045
+            ],
+            [
+              "192.168.131.109",
+              23372
+            ],
+            [
+              "10.182.194.5",
+              20178
+            ],
+            [
+              "10.182.193.181",
+              20156
+            ],
+            [
+              "10.38.243.125",
+              19743
+            ]
+          ]
+        },
+        "overlap": {
+          "n_shared_values": 252,
+          "n_distinct_attack": 298,
+          "n_distinct_benign": 4187,
+          "attack_volume_in_shared_pct": 99.9760609038769,
+          "benign_volume_in_shared_pct": 83.1115552169798,
+          "shared_values_sample": [
+            "34.200.187.200",
+            "199.232.198.133",
+            "18.200.66.41",
+            "104.96.91.162",
+            "52.208.185.108",
+            "151.101.64.217",
+            "13.107.21.200",
+            "142.0.160.17",
+            "52.30.14.23",
+            "185.54.150.123"
+          ]
+        }
+      },
+      "url": {
+        "field": "url",
+        "attack": {
+          "n_total": 1711506,
+          "n_with_field": 1695548,
+          "field_coverage_pct": 99.06760478783013,
+          "n_distinct": 432507,
+          "top1_share": 3.597656922717611e-05,
+          "top3_share": 9.908301033058338e-05,
+          "norm_entropy": 0.9988339680215651,
+          "top_values": [
+            [
+              "/sdk",
+              61
+            ],
+            [
+              "/",
+              54
+            ],
+            [
+              "/HNAP1",
+              53
+            ],
+            [
+              "/wp-login.php",
+              42
+            ],
+            [
+              "/wp-content/uploads/dump.sql",
+              15
+            ]
+          ]
+        },
+        "benign": {
+          "n_total": 582122,
+          "n_with_field": 643,
+          "field_coverage_pct": 0.11045794524171909,
+          "n_distinct": 31,
+          "top1_share": 0.5738724727838258,
+          "top3_share": 0.7387247278382582,
+          "norm_entropy": 0.5247593152083727,
+          "top_values": [
+            [
+              "/wp-login.php",
+              369
+            ],
+            [
+              "/remote.php/dav/files/kdurham/Portugal.jpg?x=32&y=32&forceIcon=0&preview=1",
+              68
+            ],
+            [
+              "/remote.php/dav/files/kdurham/Teotihuacan.jpg?x=32&y=32&forceIcon=0&preview=1",
+              38
+            ],
+            [
+              "/remote.php/dav/files/sbrooks/Portugal.jpg?x=32&y=32&forceIcon=0&preview=1",
+              32
+            ],
+            [
+              "/remote.php/dav/files/jowen/Lake-Constance.jpg?x=32&y=32&forceIcon=0&preview=1",
+              28
+            ]
+          ]
+        },
+        "overlap": {
+          "n_shared_values": 2,
+          "n_distinct_attack": 432507,
+          "n_distinct_benign": 31,
+          "attack_volume_in_shared_pct": 0.0025950312229438507,
+          "benign_volume_in_shared_pct": 59.25349922239502,
+          "shared_values_sample": [
+            "/remote.php/dav/files/cortiz/Lake-Constance.jpg?x=32&y=32&forceIcon=0&preview=1",
+            "/wp-login.php"
+          ]
+        }
+      }
+    },
+    "AIT-ADS Suricata (86601)": {
+      "srcip": {
+        "field": "srcip",
+        "attack": {
+          "n_total": 6018,
+          "n_with_field": 6018,
+          "field_coverage_pct": 100.0,
+          "n_distinct": 285,
+          "top1_share": 0.11897640412097042,
+          "top3_share": 0.35044865403788633,
+          "norm_entropy": 0.6805979470205342,
+          "top_values": [
+            [
+              "10.182.193.181",
+              716
+            ],
+            [
+              "10.182.194.5",
+              702
+            ],
+            [
+              "172.28.192.4",
+              691
+            ],
+            [
+              "192.168.131.109",
+              353
+            ],
+            [
+              "10.38.243.125",
+              312
+            ]
+          ]
+        },
+        "benign": {
+          "n_total": 300617,
+          "n_with_field": 300617,
+          "field_coverage_pct": 100.0,
+          "n_distinct": 4150,
+          "top1_share": 0.08996497204083602,
+          "top3_share": 0.23476050921937217,
+          "norm_entropy": 0.5280711073656456,
+          "top_values": [
+            [
+              "172.28.192.4",
+              27045
+            ],
+            [
+              "192.168.131.109",
+              23372
+            ],
+            [
+              "10.182.194.5",
+              20156
+            ],
+            [
+              "10.182.193.181",
+              20108
+            ],
+            [
+              "10.38.243.125",
+              19727
+            ]
+          ]
+        },
+        "overlap": {
+          "n_shared_values": 243,
+          "n_distinct_attack": 285,
+          "n_distinct_benign": 4150,
+          "attack_volume_in_shared_pct": 95.81256231306082,
+          "benign_volume_in_shared_pct": 82.47737153920104,
+          "shared_values_sample": [
+            "34.200.187.200",
+            "199.232.198.133",
+            "18.200.66.41",
+            "104.96.91.162",
+            "52.208.185.108",
+            "151.101.64.217",
+            "13.107.21.200",
+            "142.0.160.17",
+            "52.30.14.23",
+            "185.54.150.123"
+          ]
+        }
+      }
+    },
+    "AIT-ADS AMiner": {
+      "srcip": {
+        "field": "srcip",
+        "attack": {
+          "n_total": 47057,
+          "n_with_field": 40501,
+          "field_coverage_pct": 86.06796013345517,
+          "n_distinct": 20,
+          "top1_share": 0.2437223772252537,
+          "top3_share": 0.6388731142440928,
+          "norm_entropy": 0.6181945709958501,
+          "top_values": [
+            [
+              "10.38.243.125",
+              9871
+            ],
+            [
+              "10.237.1.238",
+              8058
+            ],
+            [
+              "172.17.130.196",
+              7946
+            ],
+            [
+              "10.182.193.78",
+              6427
+            ],
+            [
+              "172.21.128.119",
+              3319
+            ]
+          ]
+        },
+        "benign": {
+          "n_total": 8501,
+          "n_with_field": 872,
+          "field_coverage_pct": 10.257616750970474,
+          "n_distinct": 74,
+          "top1_share": 0.05963302752293578,
+          "top3_share": 0.17660550458715596,
+          "norm_entropy": 0.8429242659572831,
+          "top_values": [
+            [
+              "172.21.129.224",
+              52
+            ],
+            [
+              "172.24.249.224",
+              51
+            ],
+            [
+              "10.132.56.81",
+              51
+            ],
+            [
+              "172.17.130.37",
+              49
+            ],
+            [
+              "10.38.243.125",
+              49
+            ]
+          ]
+        },
+        "overlap": {
+          "n_shared_values": 14,
+          "n_distinct_attack": 20,
+          "n_distinct_benign": 74,
+          "attack_volume_in_shared_pct": 99.84691736006518,
+          "benign_volume_in_shared_pct": 45.06880733944954,
+          "shared_values_sample": [
+            "10.237.0.166",
+            "192.168.131.234",
+            "192.168.188.32",
+            "172.17.130.196",
+            "10.237.1.238",
+            "::1",
+            "172.24.249.224",
+            "10.182.193.78",
+            "10.132.56.81",
+            "172.21.128.119"
+          ]
+        }
+      },
+      "path": {
+        "field": "path",
+        "attack": {
+          "n_total": 47057,
+          "n_with_field": 40501,
+          "field_coverage_pct": 86.06796013345517,
+          "n_distinct": 11469,
+          "top1_share": 0.0016048986444779142,
+          "top3_share": 0.0024937655860349127,
+          "norm_entropy": 0.9815460832027325,
+          "top_values": [
+            [
+              "/",
+              65
+            ],
+            [
+              "/sdk",
+              18
+            ],
+            [
+              "/HNAP1",
+              18
+            ],
+            [
+              "/?attachment_id=5",
+              16
+            ],
+            [
+              "/wp-content/uploads/dump.sql",
+              15
+            ]
+          ]
+        },
+        "benign": {
+          "n_total": 8501,
+          "n_with_field": 848,
+          "field_coverage_pct": 9.975297023879543,
+          "n_distinct": 270,
+          "top1_share": 0.09080188679245282,
+          "top3_share": 0.18985849056603774,
+          "norm_entropy": 0.865389968685492,
+          "top_values": [
+            [
+              "/",
+              77
+            ],
+            [
+              "*",
+              42
+            ],
+            [
+              "/services/ajax.php/horde/topbarUpdate",
+              42
+            ],
+            [
+              "/ocs/v2.php/apps/notifications/api/v1/notifications?format=json",
+              37
+            ],
+            [
+              "/login.php",
+              19
+            ]
+          ]
+        },
+        "overlap": {
+          "n_shared_values": 6,
+          "n_distinct_attack": 11469,
+          "n_distinct_benign": 270,
+          "attack_volume_in_shared_pct": 0.18271153798671638,
+          "benign_volume_in_shared_pct": 19.57547169811321,
+          "shared_values_sample": [
+            "/mnemo/memo.php?actionID=add_memo",
+            "/services/ajax.php/imp/sendMessage",
+            "*",
+            "/ocs/v2.php/apps/notifications/api/v1/notifications?format=json",
+            "/",
+            "/services/ajax.php/imp/poll"
+          ]
+        }
+      }
+    }
+  }
+}

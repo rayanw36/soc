@@ -1,0 +1,8 @@
+technique,n,recall_original,recall_zeroed,recall_benigntyp
+T1053.003,6,6,6.0,0.0
+T1543.002,6,6,6.0,0.0
+T1546.004,6,5,6.0,0.0
+T1098.004,6,6,6.0,6.0
+OVERALL,24,23,24.0,6.0
+MIRROR_CONTROL_benign_original,267,18,,
+MIRROR_CONTROL_benign_poisoned_with_attack_temporal,267,267,,
