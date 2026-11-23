@@ -1,4 +1,5 @@
 # Rule-Identity Shortcuts and Benign-Corpus Confounds in SIEM Alert-Triage Evaluation
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24438252.svg)](https://doi.org/10.5281/zenodo.24438252)
 
 Artifact repository for the paper *Rule-Identity Shortcuts and Benign-Corpus Confounds in SIEM Alert-Triage
 Evaluation* by Rayen Chikhaoui, Mohammad Arwani, Abdulaziz Barnawi, Farid Binbeshr and Muhammad Imam (King Fahd
